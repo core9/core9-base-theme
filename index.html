@@ -91,6 +91,13 @@ body {
 
 /* style */
 
+article {
+  margin-left: -7px;
+}
+aside {
+  margin-right: 7px;
+}
+
 #main-container {
 	overflow-y: auto;
 	max-height: 411px;
@@ -172,7 +179,7 @@ p {
 				</footer>
 			</article>
 
-			<aside>
+			<aside id="side">
 				<h3>Fighting to stay on top</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 					Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula
@@ -221,9 +228,7 @@ p {
 				document.querySelector('#main-container').style
 	            .setProperty(
 	                'width', (parseInt(document.body.clientWidth) + 30) + 'px');
-		        document.querySelector('article').style
-	              .setProperty(
-	                  'margin-left', '-8px');
+
 			},
 
 			_resizeMainHeight : function() {
