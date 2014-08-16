@@ -91,18 +91,17 @@ body {
 
 /* style */
 
-article {
-  margin-left: -7px;
-}
-aside {
-  margin-right: 7px;
-}
+
 
 #main-container {
 	overflow-y: auto;
 	max-height: 411px;
 	position: fixed;
 	width: 100%;
+	overflow-x:hidden;
+}
+#main{
+  
 }
 
 #footer-container {
@@ -128,6 +127,9 @@ p {
 	padding-top: 10px;
 	padding-bottom: 20px;
 }
+
+
+
 </style>
 
 
@@ -148,7 +150,7 @@ p {
 		</header>
 	</div>
 	<div class="page-row page-row-expanded" id="main-container">
-		<div id="main" class="wrapper clearfix">
+		<div id="main" class="wrapper clearfix main">
 
 			<article>
 				<header>
@@ -225,10 +227,12 @@ p {
 			},
 			
 			_resizeMainWidth : function(){				
-				document.querySelector('#main-container').style
+		        document.querySelector('#main-container').style
 	            .setProperty(
-	                'width', (parseInt(document.body.clientWidth) + 30) + 'px');
-
+	                'width', (parseInt(document.body.clientWidth) + 40)  + 'px');
+	            document.querySelector('#main').style
+	              .setProperty(
+	                  'padding-right', '40px');
 			},
 
 			_resizeMainHeight : function() {
