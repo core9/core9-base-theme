@@ -20,18 +20,22 @@
 <style>
 
 /* cssreset.com */
-*{margin:0;padding:0;}
+* {
+	margin: 0;
+	padding: 0;
+}
 
-html,
-body { height: 100%; }
+html, body {
+	height: 100%;
+}
 
 body {
-	background: #000000 url('assets/images/mountain.png') no-repeat bottom left;
+	background: #000000 url('assets/images/mountain.png') no-repeat bottom
+		left;
 	background-size: 100% 100%;
 	width: 100%;
 	color: #fff;
 	display: table;
-	
 }
 
 .page-row {
@@ -41,6 +45,38 @@ body {
 
 .page-row-expanded {
 	height: 100%;
+}
+
+/* style */
+#main-container {
+	overflow-y: scroll;
+	max-height: 411px;
+	position: fixed;
+	width: 104%;
+}
+
+#footer-container {
+	_background-color: rgba(63, 62, 61, 0.88);
+}
+
+nav ul li {
+	list-style-type: none !important;
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+	padding: 10px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+p {
+	padding: 10px;
+	padding-top: 10px;
+	padding-bottom: 20px;
 }
 </style>
 
@@ -94,7 +130,7 @@ body {
 			</article>
 
 			<aside>
-				<h3>aside</h3>
+				<h3>Fighting to stay on top</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 					Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula
 					ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra
@@ -113,6 +149,21 @@ body {
 			<h3>footer</h3>
 		</footer>
 	</div>
+	<script>
+		var bodyHeight = document.querySelector('html').clientHeight;
+		var topHeight = document.querySelector('#header-container').clientHeight;
+		var footerHeight = document.querySelector('#footer-container').clientHeight;
+		var mainHeight = parseInt(bodyHeight) - parseInt(topHeight)
+				- parseInt(footerHeight) - 80;
+		document.querySelector('#main-container').style.setProperty(
+				'max-height', mainHeight + 'px');
 
+		console.log('body : ' + bodyHeight);
+
+		console.log('top : ' + topHeight);
+		console.log('footer : ' + footerHeight);
+
+		console.log('main : ' + mainHeight);
+	</script>
 </body>
 </html>
