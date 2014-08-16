@@ -27,15 +27,57 @@
 
 html, body {
 	height: 100%;
+	 background-color: #020322;
 }
 
 body {
-	background: #000000 url('assets/images/mountain.png') no-repeat bottom
-		left;
-	background-size: 100% 100%;
+
+    animation: fadein 7s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+body {
+
 	width: 100%;
 	color: #fff;
 	display: table;
+
+
 }
 
 .page-row {
@@ -48,11 +90,12 @@ body {
 }
 
 /* style */
+
 #main-container {
-	overflow-y: scroll;
+	overflow-y: auto;
 	max-height: 411px;
 	position: fixed;
-	width: 104%;
+	width: 100%;
 }
 
 #footer-container {
@@ -150,20 +193,54 @@ p {
 		</footer>
 	</div>
 	<script>
-		var bodyHeight = document.querySelector('html').clientHeight;
-		var topHeight = document.querySelector('#header-container').clientHeight;
-		var footerHeight = document.querySelector('#footer-container').clientHeight;
-		var mainHeight = parseInt(bodyHeight) - parseInt(topHeight)
-				- parseInt(footerHeight) - 80;
-		document.querySelector('#main-container').style.setProperty(
-				'max-height', mainHeight + 'px');
+		var Core9 = {
 
-		console.log('body : ' + bodyHeight);
+			init : function() {
+				Core9.setEvents();
+				Core9.setStage();
+			},
 
-		console.log('top : ' + topHeight);
-		console.log('footer : ' + footerHeight);
+			setEvents : function() {
+				window.onresize = function() {
+					Core9.setStage();
+				};
+			},
 
-		console.log('main : ' + mainHeight);
+			setStage : function() {
+				Core9._resizeMainHeight();
+				Core9._resizeMainWidth();
+				Core9._setBodyBackground();
+			},
+
+			_setBodyBackground : function() {
+				document.querySelector('body').style.setProperty('background', '#020322 url("assets/images/mountain.png") no-repeat bottom left');
+				document.querySelector('body').style.setProperty('background-size', '100% 100%');
+			},
+			
+			_resizeMainWidth : function(){				
+				document.querySelector('#main-container').style
+	            .setProperty(
+	                'width', (parseInt(document.body.clientWidth) + 30) + 'px');
+		        document.querySelector('article').style
+	              .setProperty(
+	                  'margin-left', '-8px');
+			},
+
+			_resizeMainHeight : function() {
+				document.querySelector('#main-container').style
+						.setProperty(
+								'max-height',
+								(parseInt(document.querySelector('html').clientHeight)
+										- parseInt(document
+												.querySelector('#header-container').clientHeight)
+										- parseInt(document
+												.querySelector('#footer-container').clientHeight) - 80)
+										+ 'px');
+			}
+
+		}
+
+		Core9.init();
 	</script>
 </body>
 </html>

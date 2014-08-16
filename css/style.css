@@ -93,6 +93,10 @@ nav a:hover{
     INTERMEDIATE: Menu
    ==================== */
 	
+	article {
+  margin-left:0px;
+  }
+	
 	nav a{
 		float:left;
 		width:27%;
