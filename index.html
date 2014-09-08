@@ -3,9 +3,11 @@
 <head>
 <meta name="viewport" content="width=device-width, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes" />
+<style>
+*{margin:0;padding:0}body,html{height:100%;background:#000}header{height:50px;background:#333}main{min-height:100%;margin-top:-50px;margin-bottom:-50px;display:block}main:after{content:"";display:block}footer,main:after{height:50px}footer{background:#333}
+</style>
 <script>
 function loadCSS(c,b,d){var a=window.document.createElement("link");b=b||window.document.getElementsByTagName("script")[0];a.rel="stylesheet";a.href=c;a.media="only x";b.parentNode.insertBefore(a,b);setTimeout(function(){a.media=d||"all"});return a};
-loadCSS( "css/style.css" );
 loadCSS( "css/layout.css" );
 </script>
 </head>
