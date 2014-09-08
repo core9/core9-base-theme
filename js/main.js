@@ -17,8 +17,13 @@ var Core9 = {
 	footer : document.querySelector('footer'),
 
 	init : function() {
+		Core9.loadCss();
 		Core9.setEvents();
 		Core9.setStage();
+	},
+	
+	loadCss : function(){
+		
 	},
 
 	setEvents : function() {
