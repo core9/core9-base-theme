@@ -46,7 +46,7 @@ var Core9 = {
 	_setBodyBackground : function() {
 		document.querySelector('body').style
 				.setProperty('background',
-						'#020322 url("assets/images/mountain-2.jpg") no-repeat bottom left');
+						'url("assets/images/mountain-2.jpg") no-repeat bottom left');
 		document.querySelector('body').style.setProperty('background-size',
 				'100% 100%');
 	}
