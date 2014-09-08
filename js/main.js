@@ -40,7 +40,7 @@ var Core9 = {
 	_resizeCenter : function() {
 		Core9.center.style.setProperty('top', Core9.header.clientHeight + 'px');
 		Core9.center.style.setProperty('height',
-				(Core9.body.clientHeight - Core9.header.clientHeight) + 'px');
+				(Core9.body.clientHeight - Core9.header.clientHeight - Core9.footer.clientHeight) + 'px');
 	},
 
 	_setBodyBackground : function() {

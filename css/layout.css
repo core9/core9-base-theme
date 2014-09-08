@@ -2,7 +2,15 @@
   position: absolute;
   margin: 0 auto;
   top: -50px;
-  width: 100%;
+  width: 960px;
+  left: 50%;
+  margin-left: -480px;
   height: 100vh;
   overflow: hidden;
+  background-color: #fff;
+}
+@media all and (max-width: 1000px) and (min-width: 700px) {
+  .center {
+    width: 960px;
+  }
 }
