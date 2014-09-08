@@ -1,20 +1,34 @@
 .center {
-  position: absolute;
+  position: relative;
   margin: 0 auto;
-  top:-50px;
-  width: 960px;
-  left:50%;
-  margin-left:-480px;
+  margin-top: -50px;
   height: 100vh;
-  overflow:hidden;
+  overflow: hidden;
   background-color: #fff;
 }
 
+@media only screen and (min-width: 320px) {
+  .center {
+  width:100%;
+}}
 
-@media all and (max-width: 1000px) and (min-width: 700px) {
-.center {
-    width: 960px;
-  }
-}
+@media only screen and (min-width: 480px) {
+    .center {
+    width:100%;
+}}
 
+@media only screen and (min-width: 768px) {
+ .center {
+  width:100%;
+}}
+
+@media only screen and (min-width: 992px) {
+  .center {
+  width:960px;
+}}
+
+@media only screen and (min-width: 1200px) {
+  .center {
+  width:960px;
+}}
 
