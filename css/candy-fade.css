@@ -1,13 +1,13 @@
 header,
 footer {
-  animation: fadein 55s;
-  -moz-animation: fadein 55s;
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
   /* Firefox */
 
-  -webkit-animation: fadein 55s;
+  -webkit-animation: fadein 1s;
   /* Safari and Chrome */
 
-  -o-animation: fadein 55s;
+  -o-animation: fadein 1s;
   /* Opera */
 
 }
