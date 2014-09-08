@@ -4,7 +4,7 @@
   margin-top: -50px;
   height: 100vh;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #f2f2f2;
 }
 @media only screen and (min-width: 320px) {
   .center {
