@@ -15,10 +15,6 @@ transition: opacity 0.5s;
             transition: opacity 0.5s ease-in;
 }
 </style>
-<script>
-function loadCSS(c,b,d){var a=window.document.createElement("link");b=b||window.document.getElementsByTagName("script")[0];a.rel="stylesheet";a.href=c;a.media="only x";b.parentNode.insertBefore(a,b);setTimeout(function(){a.media=d||"all"});return a};
-loadCSS( "css/layout.css" );
-</script>
 </head>
 <body onload="document.body.style.opacity='1'">
 	<header> 
@@ -622,7 +618,10 @@ Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
 	</div>
 	</main>
 	<footer> </footer>
-
+<script>
+function loadCSS(c,b,d){var a=window.document.createElement("link");b=b||window.document.getElementsByTagName("script")[0];a.rel="stylesheet";a.href=c;a.media="only x";b.parentNode.insertBefore(a,b);setTimeout(function(){a.media=d||"all"});return a};
+loadCSS( "css/layout.css" );
+</script>
 	<script async  src="js/enquire.min.js"></script>
 	<script async  src="js/main.js"></script>
 </body>
