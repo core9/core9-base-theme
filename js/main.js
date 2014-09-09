@@ -1,13 +1,45 @@
 // When ready...
-window.addEventListener("load",function() {
+window.addEventListener("load", function() {
 	// Set a timeout...
-	setTimeout(function(){
+	setTimeout(function() {
 		// Hide the address bar!
 		window.scrollTo(0, 1);
 	}, 0);
 });
 
+var Core9Plugins = {
+	fadeOut : function(id, val) {
+		if (isNaN(val)) {
+			val = 9;
+		}
+		document.getElementById(id).style.opacity = '0.' + val;
+		// For IE
+		document.getElementById(id).style.filter = 'alpha(opacity=' + val
+				+ '0)';
+		if (val > 0) {
+			val--;
+			setTimeout('Core9Plugins.fadeOut("' + id + '",' + val + ')', 90);
+		} else {
+			return;
+		}
+	},
 
+	fadeIn : function(id, val) {
+		if (isNaN(val)) {
+			val = 0;
+		}
+		document.getElementById(id).style.opacity = '0.' + val;
+		// For IE
+		document.getElementById(id).style.filter = 'alpha(opacity=' + val
+				+ '0)';
+		if (val < 9) {
+			val++;
+			setTimeout('Core9Plugins.fadeIn("' + id + '",' + val + ')', 90);
+		} else {
+			return;
+		}
+	}
+}
 
 var Core9 = {
 
@@ -21,9 +53,9 @@ var Core9 = {
 		Core9.setEvents();
 		Core9.setStage();
 	},
-	
-	loadCss : function(){
-		
+
+	loadCss : function() {
+
 	},
 
 	setEvents : function() {
@@ -38,15 +70,17 @@ var Core9 = {
 	},
 
 	_resizeCenter : function() {
-		Core9.center.style.setProperty('top', Core9.header.clientHeight - 85 + 'px');
-		Core9.center.style.setProperty('min-height',
-				(Core9.body.clientHeight - Core9.header.clientHeight - Core9.footer.clientHeight + 135) + 'px');
+		Core9.center.style.setProperty('top', Core9.header.clientHeight - 85
+				+ 'px');
+		Core9.center.style.setProperty('min-height', (Core9.body.clientHeight
+				- Core9.header.clientHeight - Core9.footer.clientHeight + 135)
+				+ 'px');
 	},
 
 	_setBodyBackground : function() {
-		document.querySelector('body').style
-				.setProperty('background',
-						'url("assets/images/mountain-2.jpg") no-repeat bottom left');
+		Core9Plugins.fadeIn('index', 3);
+		document.querySelector('body').style.setProperty('background',
+				'url("assets/images/mountain-2.jpg") no-repeat bottom left');
 		document.querySelector('body').style.setProperty('background-size',
 				'100% 100%');
 	}
