@@ -8,37 +8,7 @@ window.addEventListener("load", function() {
 });
 
 var Core9Plugins = {
-	fadeOut : function(id, val) {
-		if (isNaN(val)) {
-			val = 9;
-		}
-		document.getElementById(id).style.opacity = '0.' + val;
-		// For IE
-		document.getElementById(id).style.filter = 'alpha(opacity=' + val
-				+ '0)';
-		if (val > 0) {
-			val--;
-			setTimeout('Core9Plugins.fadeOut("' + id + '",' + val + ')', 90);
-		} else {
-			return;
-		}
-	},
 
-	fadeIn : function(id, val) {
-		if (isNaN(val)) {
-			val = 0;
-		}
-		document.getElementById(id).style.opacity = '0.' + val;
-		// For IE
-		document.getElementById(id).style.filter = 'alpha(opacity=' + val
-				+ '0)';
-		if (val < 9) {
-			val++;
-			setTimeout('Core9Plugins.fadeIn("' + id + '",' + val + ')', 90);
-		} else {
-			return;
-		}
-	}
 }
 
 var Core9 = {
@@ -78,7 +48,6 @@ var Core9 = {
 	},
 
 	_setBodyBackground : function() {
-		Core9Plugins.fadeIn('index', 3);
 		document.querySelector('body').style.setProperty('background',
 				'url("assets/images/mountain-2.jpg") no-repeat bottom left');
 		document.querySelector('body').style.setProperty('background-size',
