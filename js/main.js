@@ -39,7 +39,7 @@ var Core9 = {
 
 	_resizeCenter : function() {
 		Core9.center.style.setProperty('top', Core9.header.clientHeight - 85 + 'px');
-		Core9.center.style.setProperty('height',
+		Core9.center.style.setProperty('min-height',
 				(Core9.body.clientHeight - Core9.header.clientHeight - Core9.footer.clientHeight + 135) + 'px');
 	},
 
