@@ -66,16 +66,10 @@ transition: opacity 0.5s;
 .block-group>.block-group{clear:none;float:left;margin:0 !important}
 .block{float:left;width:100%}
 </style>
-<script>
-/* function loadCSS(c,b,d){var a=window.document.createElement("link");b=b||window.document.getElementsByTagName("script")[0];a.rel="stylesheet";a.href=c;a.media="only x";b.parentNode.insertBefore(a,b);setTimeout(function(){a.media=d||"all"});return a};
-loadCSS( "css/layout.css" );
-loadCSS( "css/pocketgrid.min.css" ); */
-</script>
 <style>
 /* Pocket grid
    Smartphone version
    Nothing to do: blocks are stacked by default. */
-
 .box {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -122,12 +116,9 @@ loadCSS( "css/pocketgrid.min.css" ); */
 .b8 { width: 25%; }
 .b9 { width: 25%; }
 .b10 { width: 100%; }
-
-
-
 </style>
 </head>
-<body onload="document.body.style.opacity='1'">
+<body onload="document.body.style.opacity='1'" style="opacity: 1; background: url(images/mountain-2.jpg) 0% 100% / 100% 100% no-repeat;">
 	<header> 
 	<div style="background-color:#f2f2f2"><span id="welcome-header"><!-- Welkom in de Tirolershop, de plaats voor alle feestartikelen voor de Oktoberfesten! --></span></div>
 	</header>
@@ -160,5 +151,10 @@ loadCSS( "css/pocketgrid.min.css" ); */
   <script async src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"></script>
 	<script async  src="js/enquire.min.js"></script>
 	<script async  src="js/main.js"></script>
+<script>
+/* function loadCSS(c,b,d){var a=window.document.createElement("link");b=b||window.document.getElementsByTagName("script")[0];a.rel="stylesheet";a.href=c;a.media="only x";b.parentNode.insertBefore(a,b);setTimeout(function(){a.media=d||"all"});return a};
+loadCSS( "css/layout.css" );
+loadCSS( "css/pocketgrid.min.css" ); */
+</script>
 </body>
 </html>
