@@ -37,7 +37,7 @@ var Core9 = {
 
 	setEvents : function() {
 		window.onresize = function() {
-			this.setStage();
+			Core9.setStage();
 		};
 	},
 
