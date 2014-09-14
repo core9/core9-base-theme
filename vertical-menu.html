@@ -215,14 +215,17 @@ transition:1s;
 .ticker{height:20px;}
 .ticker, .spacer {border: 0px;}
 
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
+ .ticker { height:40px; }
   .metroMenu div.panels {left: 100px;}
 }
 @media only screen and (min-width: 768px) {
   .metroMenu div.panels {left: 193px;}
   .nav {width: 194px;}
    .center {width: 768px;}
+}
+@media only screen and (max-width: 768px) {
+  .metroMenu div.panels {left: 193px;}
 }
 @media only screen and (min-width: 960px) {
 .metroMenu div.panels {left: 240px;}
@@ -396,7 +399,7 @@ transition:1s;
   </main>
   <footer> </footer>
 
-  <script async src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.min.js"></script>
+  <script async src="js/respond.min.js"></script>
   <script async  src="js/enquire.min.js"></script>
   <script async  src="js/main.js"></script>
 </body>
