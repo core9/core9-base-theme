@@ -24,7 +24,7 @@ transition: opacity 0.5s;
   background-color: #f2f2f2;
   -webkit-box-shadow: 0px 9px 18px -7px #323232;
   -moz-box-shadow: 0px 9px 18px -7px #323232;
-  box-shadow: 0px 9px 18px -7px #323232;
+  box-shadow: 0px 30px 20px -14px #323232; /*experiment*/
   margin-bottom: -100px;
 }
 </style>
@@ -212,6 +212,8 @@ transition:1s;
 </style>
 
 <style>
+.ticker{height:20px;}
+.ticker, .spacer {border: 0px;}
 
 @media only screen and (max-width: 768px) {
   .metroMenu div.panels {left: 100px;}
@@ -225,7 +227,7 @@ transition:1s;
 .metroMenu div.panels {left: 240px;}
  .links {display:block;}
  .slider { width: 576px;}
- #welcome-header {margin-left: 480px;}
+
  .center {width: 960px;}
  .box {width: 960px;margin 0px;padding: 0;}
  .ticker { width: 960px; }
@@ -252,13 +254,13 @@ transition:1s;
 </head>
 <body onload="document.body.style.opacity='1'" style="background: url(images/mountain-2.jpg) 0% 100% / 100% 100% no-repeat;">
   <header> 
-  <div style="background-color:#f2f2f2"><span id="welcome-header">Welkom in de Tirolershop, de plaats voor alle feestartikelen voor de Oktoberfesten!</span></div>
+  <div style="background-color:#f2f2f2; width:100%; height:20px;"><br></div>
   </header>
   <main>
   <div class="center">
 
     <div class="block-group">
-        <div class="ticker block box">ticker</div>
+        <div class="ticker block box"><span id="welcome-header">Welkom in de Tirolershop, de plaats voor alle feestartikelen voor de Oktoberfesten!</span></div>
         <div class="spacer block box">spacer</div>
         <div class="header1 block box">Header1</div>
         <div class="header2 block box">Header2</div>
