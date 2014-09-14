@@ -6,7 +6,20 @@ window.addEventListener("load", function() {
 });
 
 var Core9Plugins = {
-
+		menu : {
+			init : function(){
+				console.log('init menu..');
+				this.setEvents();
+			},
+			setEvents : function(){
+				console.log('setting events..');
+				var items = document.querySelectorAll('ul.options > li');
+				for(var i = 0; i < items.length ; i++){
+					console.log(items[i]); // add click handler to show sub menu
+				}
+			}
+		
+		}
 }
 
 var Core9 = {
@@ -17,23 +30,24 @@ var Core9 = {
 	footer : document.querySelector('footer'),
 
 	init : function() {
-		Core9.setEvents();
-		Core9.setStage();
+		this.setEvents();
+		this.setStage();
+		Core9Plugins.menu.init();
 	},
 
 	setEvents : function() {
 		window.onresize = function() {
-			Core9.setStage();
+			this.setStage();
 		};
 	},
 
 	setStage : function() {
 		//Core9._setBodyBackground();
-		Core9._resizeCenter();
+		this._resizeCenter();
 	},
 
 	_resizeCenter : function() {
-		Core9.center.style.setProperty('min-height', (Core9.body.clientHeight - Core9.footer.clientHeight + 85)
+		this.center.style.setProperty('min-height', (this.body.clientHeight - this.footer.clientHeight + 85)
 				+ 'px');
 	},
 
