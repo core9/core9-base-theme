@@ -5,18 +5,32 @@ window.addEventListener("load", function() {
 	}, 0);
 });
 
+
+
 var Core9Plugins = {
 		menu : {
 			init : function(){
-				console.log('init menu..');
 				this.setEvents();
 			},
 			setEvents : function(){
-				console.log('setting events..');
 				var items = document.querySelectorAll('ul.options > li');
 				for(var i = 0; i < items.length ; i++){
-					console.log(items[i]); // add click handler to show sub menu
+					this.setClick(items[i]);
 				}
+			},
+			setClick : function(elem){
+				elem.onclick=function(){
+					var sub = this.querySelector('ul.sub');
+					console.log(sub);
+					var margin = this.style.marginBottom;
+					console.log(margin);
+					if(margin == "" || margin == "0px"){
+						this.style.setProperty('margin-bottom', '200px');
+					}else{
+						this.style.setProperty('margin-bottom', '0px');
+					}
+					
+				};
 			}
 		
 		}
