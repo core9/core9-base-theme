@@ -9,28 +9,37 @@ window.addEventListener("load", function() {
 
 var Core9Plugins = {
 		menu : {
+			items : document.querySelectorAll('.metroMenu > ul.options > li'),
 			init : function(){
 				this.setEvents();
 			},
 			setEvents : function(){
-				var items = document.querySelectorAll('ul.options > li');
-				for(var i = 0; i < items.length ; i++){
-					this.setClick(items[i]);
+				for(var i = 0; i < Core9Plugins.menu.items.length ; i++){
+					this.setClick(Core9Plugins.menu.items[i]);
 				}
 			},
 			setClick : function(elem){
 				elem.onclick=function(){
-					var sub = this.querySelector('ul.sub');
-					console.log(sub);
+					var subMenu = this.querySelector('ul.sub');
+					if(subMenu == null)return;
 					var margin = this.style.marginBottom;
-					console.log(margin);
 					if(margin == "" || margin == "0px"){
-						this.style.setProperty('margin-bottom', '200px');
+						Core9Plugins.menu.showSubMenu(this, subMenu);
 					}else{
-						this.style.setProperty('margin-bottom', '0px');
+						Core9Plugins.menu.hideSubMenu(this, subMenu);
 					}
 					
 				};
+			},
+			showSubMenu : function(elem, subMenu){
+				document.querySelector('ul.options').style.setProperty('height', '600px');
+				subMenu.style.setProperty('display', 'block');
+				elem.style.setProperty('margin-bottom', subMenu.offsetHeight + 'px');
+			},
+			hideSubMenu : function(elem, subMenu){
+				document.querySelector('ul.options').style.setProperty('height', '400px');
+				subMenu.style.setProperty('display', 'none');
+				elem.style.setProperty('margin-bottom', '0px');
 			}
 		
 		}
