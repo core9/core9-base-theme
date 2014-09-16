@@ -80,9 +80,9 @@ transition: opacity 0.5s;
  .header1 {width: 240px;}
  .header2 {width: 576px;}
  .header3 {width: 144px;}
- .nav { width: 240px; height:313px;}
- .slider { width: 576px; height:313px;}
- .links { width: 144px; height: 313px;}
+ .nav { width: 240px; height:113px;}
+ .slider { width: 576px; height:113px;}
+ .links { width: 144px; height: 113px;}
  .b1, .b2 { width: 480px; }
  .b3 { width: 240px; }
  .b4 { width: 720px; }
@@ -94,7 +94,87 @@ transition: opacity 0.5s;
  .b10 { width: 960px; }
 }     
 </style>
-
+<style>
+/* seo friendly tables */
+.table{
+  display:table;  /* Defines a Table */
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:14px;
+  border-bottom:2px solid #dddddd;
+  color:#8d8d8d;
+  margin:10px 0;
+}
+.table-head{
+   display: table-header-group; /* Defines a table header group */
+}
+.table-head .column{ /* Column inside the table-head */
+  background:#333333;
+  color:#7d7d7d;
+  border-right:1px solid #5d5d5d;
+  border-bottom:none;
+}
+.table-head .column:hover{ /* Column hover inside the table-head */
+  background:#222222;
+}
+.row{
+  display:table-row; /* Defines a table row */
+}
+.row .column:nth-child(1){ /* First column in a row */
+  border-left:1px solid #eeeeee;
+}
+.row:last-child .column{  /* column in a last row */
+  border-bottom:none;
+}
+.column{
+  display:table-cell; /* Defines a table cell */
+  padding:10px 20px;
+  border-bottom:1px solid #eeeeee;
+  border-right:1px solid #eeeeee;
+}
+.column:hover{
+  background:#f9f9f9;
+}
+/* Responsive table */
+@media all and (max-width: 640px){
+  .table,
+  .row,
+  .column,
+  .column:before{
+    display:block;  /* Converts a table, table row, table column and table column:before into a block element */
+  }
+  .table,
+  .row .column:last-child{
+    border-bottom:none;
+  }
+  .table-head{
+    position:absolute;  /* Hides table head but not using display none */
+    top:-1000em;
+    left:-1000em;
+  }
+  .row{
+    border:1px solid #eeeeee;
+    border-top:2px solid #dddddd;
+    border-bottom:2px solid #dddddd;
+    margin:20px 0;
+  }
+  .row .column:nth-child(1){ /* first column of the row */
+    border-left:none;
+  }
+  .row .column:last-child{ /* last column of the row */
+    border-right:none;
+  }
+  .row:last-child .column,
+  .column{ /* Column in the last row and column */
+    border-bottom:1px solid #eeeeee;
+  }
+  .column:before{ /* prints the value of data-label attribute before the column data */
+    font-weight:bold;
+    padding-right:20px;
+    font-size:12px;
+    content:" "attr(data-label)" //"; /* call the attribute value of data-label and adds a string // */
+  }
+}
+</style>
 </head>
 <body onload="document.body.style.opacity='1'" style="background: url(images/mountain-2.jpg) 0% 100% / 100% 100% no-repeat;">
   <header> 
@@ -111,7 +191,7 @@ transition: opacity 0.5s;
         <div class="header3 block box">Header3</div>
         <div class="nav block box">nav</div>
         <div class="slider block box">
-            Main<br>Main<br>Main<br>Main<br>Main<br>Main<br>Main<br>Main<br>Main<br>Main<br>Main<br>Main<br>Main<br></div>
+            Main<br>Main<br>Main</div>
         <div class="links block box">Links</div>
         <div class="b1 block box">b1</div>
         <div class="b2 block box">b2</div>
