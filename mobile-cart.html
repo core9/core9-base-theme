@@ -134,6 +134,7 @@ transition: opacity 0.5s;
 .column:hover{
   background:#f9f9f9;
 }
+
 /* Responsive table */
 @media all and (max-width: 640px){
   .table,
@@ -173,6 +174,9 @@ transition: opacity 0.5s;
     font-size:12px;
     content:" "attr(data-label)" "; /* call the attribute value of data-label and adds a string // */
   }
+  .hide {
+  display:none;
+}
 }
 </style>
 </head>
@@ -244,27 +248,27 @@ transition: opacity 0.5s;
             <div class="column" data-label="Verwijderen"><button>x</button></div>
        </div>
         <div class="row">
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
+            <div class="column hide" data-label=""></div>
+            <div class="column hide" data-label=""></div>
+            <div class="column hide" data-label=""></div>
+            <div class="column hide" data-label=""></div>
             <div class="column" data-label="Subtotaal">10.00</div>
-            <div class="column" data-label=""></div>
+            <div class="column hide" data-label=""></div>
        </div>
         <div class="row">
-            <div class="column" data-label="" style="padding-top:30px;"></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
+            <div class="column hide" data-label="" style="padding-top:30px;"></div>
+            <div class="column hide" data-label=""></div>
+            <div class="column hide" data-label=""></div>
+            <div class="column hide" data-label=""></div>
+            <div class="column hide" data-label=""></div>
+            <div class="column hide" data-label=""></div>
         </div>
         <div class="row">
             <div class="column" data-label="" style="padding:0px;">Verder winkelen</div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
+            <div class="column hide" data-label=""></div>
+            <div class="column hide" data-label=""></div>
+            <div class="column hide" data-label=""></div>
+            <div class="column hide" data-label=""></div>
             <div class="column" data-label="">Afrekenen</div>
         </div>
     </div>
