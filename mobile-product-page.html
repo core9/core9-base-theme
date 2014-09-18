@@ -82,9 +82,15 @@ transition: opacity 0.5s;
  .nav { width: 240px; height:113px;}
  .slider { width: 576px; height:113px;}
  .links { width: 144px; height: 113px;}
- .b1, .b2 { width: 480px; }
+ .b1 { width: 240px; }
+ .b2 { width: 300px; }
+ .b2-5 { width: 420px; }
  .b3 { width: 240px; }
- .b4 { width: 720px; }
+ .b4 { width: 300px; }
+ .product-pricing {
+  width: 420px;
+ }
+ 
  .b5 { width: 960px; }
  .b6 { width: 240px; }
  .b7 { width: 240px; }
@@ -174,6 +180,9 @@ transition: opacity 0.5s;
     content:" "attr(data-label)" "; /* call the attribute value of data-label and adds a string // */
   }
 }
+
+
+
 </style>
 </head>
 <body onload="document.body.style.opacity='1'" style="background: url(images/mountain-2.jpg) 0% 100% / 100% 100% no-repeat;">
@@ -195,78 +204,39 @@ transition: opacity 0.5s;
         <div class="links block box">Links</div>
         <div class="b1 block box">b1</div>
         <div class="b2 block box">b2</div>
+        <div class="b2-5 block box">
+          <h1>Pruik Heini blond</h1>
+        </div>
         <div class="b3 block box">b3</div>
         <div class="b4 block box">
+          <img src="images/pruik.jpg"><br>
+          <img src="images/pruik-small.jpg">
+          <img src="images/pruik-small.jpg">
+          <img src="images/pruik-small.jpg">
+        </div>    
         
-        
-        
-        
-        <p>when the browser is resized to 640 px the table will respond and change its layout</p>
+         <div class="product-pricing block box">
+         
+        <p>when the browser is resized to 640 px the table will respond and change its layout product</p>
     <div class="table">
         <div class="table-head">
             <div class="column" data-label="Afbeelding">Afbeelding</div>
             <div class="column" data-label="Afbeelding">Artikel</div>
             <div class="column" data-label="Hoeveelheid">Hoeveelheid</div>
             <div class="column" data-label="Prijs">Prijs</div>
-            <div class="column" data-label="Subtotaal">Subtotaal</div>
-            <div class="column" data-label="Verwijderen">Verwijderen</div>
         </div>
         <div class="row">
             <div class="column" data-label="Afbeelding">2311</div>
             <div class="column" data-label="Artikel">Lorem</div>
             <div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
             <div class="column" data-label="Prijs">22</div>
-            <div class="column" data-label="Subtotaal">Web designer</div>
-            <div class="column" data-label="Verwijderen"><button>x</button></div>
        </div>
         <div class="row">
             <div class="column" data-label="Afbeelding">2311</div>
             <div class="column" data-label="Artikel">Lorem</div>
             <div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
             <div class="column" data-label="Prijs">22</div>
-            <div class="column" data-label="Subtotaal">Web designer</div>
-            <div class="column" data-label="Verwijderen"><button>x</button></div>
        </div>
-        <div class="row">
-            <div class="column" data-label="Afbeelding">2311</div>
-            <div class="column" data-label="Artikel">Lorem</div>
-            <div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
-            <div class="column" data-label="Prijs">22</div>
-            <div class="column" data-label="Subtotaal">Web designer</div>
-            <div class="column" data-label="Verwijderen"><button>x</button></div>
-       </div>
-        <div class="row">
-            <div class="column" data-label="Afbeelding">2311</div>
-            <div class="column" data-label="Artikel">Lorem</div>
-            <div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
-            <div class="column" data-label="Prijs">22</div>
-            <div class="column" data-label="Subtotaal">Web designer</div>
-            <div class="column" data-label="Verwijderen"><button>x</button></div>
-       </div>
-        <div class="row">
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label="Subtotaal">10.00</div>
-            <div class="column" data-label=""></div>
-       </div>
-        <div class="row">
-            <div class="column" data-label="" style="padding-top:30px;"></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-        </div>
-        <div class="row">
-            <div class="column" data-label="" style="padding:0px;">Verder winkelen</div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label=""></div>
-            <div class="column" data-label="">Afrekenen</div>
-        </div>
     </div>
         
         </div>
