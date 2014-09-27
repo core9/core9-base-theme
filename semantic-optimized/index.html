@@ -48,6 +48,9 @@ figure {
 	overflow: hidden;
 	float: left;
 	margin: 10px;
+	height:300px;
+	width:400px;
+	background-color:#ccc;
 }
 
 figcaption {
@@ -73,6 +76,14 @@ footer {
 
 #discount-banner {
 	width: 250px;
+}
+
+#left-long-banner {
+	height: 100px;
+}
+
+#right-long-banner {
+	height: 100px;
 }
 
 #top-article {
@@ -103,57 +114,59 @@ footer {
 </style>
 </head>
 <body>
+
 	<header>
 		<button onclick="location.reload();">Reload page</button>
 	</header>
+
 	<main role="main">
+
 	<nav id="page-nav" role="navigation"></nav>
 	<nav id="product-nav" role="navigation"></nav>
+
 	<figure id="slider" role="banner">
-		<img src="http://placehold.it/400x300"
+		<img src="http://placehold.it/400x300" height="300" width="400"
 			alt="A descriptive text of the image" />
 		<figcaption>A descriptive caption for the image.</figcaption>
 	</figure>
+
 	<figure id="discount-banner" role="banner">
-		<img src="http://placehold.it/400x300"
+		<img src="http://placehold.it/400x300" height="300" width="400"
 			alt="A descriptive text of the image" />
 		<figcaption>A descriptive caption for the image.</figcaption>
 	</figure>
+
 	<figure id="left-long-banner" role="banner">
-		<img src="http://placehold.it/400x300"
+		<img src="http://placehold.it/400x300" height="300" width="400"
 			alt="A descriptive text of the image" />
 		<figcaption>A descriptive caption for the image.</figcaption>
 	</figure>
+
 	<figure id="right-long-banner" role="banner">
-		<img src="http://placehold.it/400x300"
+		<img src="http://placehold.it/400x300" height="300" width="400"
 			alt="A descriptive text of the image" />
 		<figcaption>A descriptive caption for the image.</figcaption>
 	</figure>
+
 	<figure id="popular-banner" role="banner">
-		<img src="http://placehold.it/400x300"
+		<img src="http://placehold.it/400x300" height="300" width="400"
 			alt="A descriptive text of the image" />
 		<figcaption>A descriptive caption for the image.</figcaption>
 	</figure>
+
 	<article id="top-article" role="article">
 		<h1>Tirolershop - Feestartikelen voor de Oktoberfesten en
 			bierfeesten</h1>
 	</article>
+
 	<footer role="banner">
 		<nav></nav>
 	</footer> </main>
+
 	<footer role="banner"> </footer>
+
 	<script>
-		// remove style flash caused by figure
-		document.querySelector('main > article').style.display = 'none';
-		document.querySelector('main > footer').style.display = 'none';
-		function showElements() {
-			document.querySelector('main > article').style.display = 'block';
-			document.querySelector('main > footer').style.display = 'block';
-		}
-		setTimeout(function() {
-			showElements();
-		}, 300);
-		// remove style flash caused by figure
+
 	</script>
 </body>
 </html>
