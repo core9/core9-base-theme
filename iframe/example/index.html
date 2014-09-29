@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8"> 
+		<title>iFrame message passing test</title> 
+		<meta name="description" content="iFrame message passing test"> 
+		<meta name="viewport" content="width=device-width">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	</head> 
+	<body> 
+		<h2>Automagically resizing iFrame</h2>
+		<p>Resize window or click one of the links in the iFrame to watch it resize.</p>
+		<div style="margin:20px;text-align:right;">
+			<iframe id="iframe" src="frame.content.html" width="90%" scrolling="no"></iframe>
+		</div>
+		<p id="callback">
+		</p>
+
+
+		<script type="text/javascript" src="../js/iframeResizer.min.js"></script> 
+		<script type="text/javascript">
+
+			iFrameResize({
+				log                     : true,                  // Enable console logging
+				enablePublicMethods     : true,                  // Enable methods within iframe hosted page
+				resizedCallback         : function(messageData){ // Callback fn when resize is received
+					  console.log(messageData);
+				},
+				messageCallback         : function(messageData){ // Callback fn when message is received
+					console.log(messageData);
+					alert(messageData.message);
+				},
+				closedCallback         : function(id){ // Callback fn when iFrame is closed
+					console.log(id);
+				}
+			});
+
+
+		</script>
+
+<form name="form">
+  <input type="text" name="msg" value="Your message"/>
+  <input type="submit"/>
+</form>
+
+<script>
+
+  var win = document.getElementById("iframe").contentWindow
+
+  document.forms.form.onsubmit = function() {
+    win.postMessage(
+      this.elements.msg.value,
+      location.origin 
+    )
+    return false
+  }
+
+</script>
+
+
+
+
+	</body> 
+</html>
