@@ -1,68 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-<meta name="apple-mobile-web-app-capable" content="yes" />
 <title>Base theme</title>
 <style>
-* {
-	margin: 0;
-	padding: 0;
+body{
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
 }
-
-body {
-	background-color: azure;
-}
-
-header {
-	background-color: #ccc;
-	height: 150px;
-	text-align: center;
-}
-
-main {
-	position: relative;
-	margin: 0 auto;
-	margin-top: -60px;
-	margin-bottom: -90px;
-	min-height: 1000px;
-	max-width: 960px;
-	background-color: cadetblue;
-	overflow: hidden;
-	padding: 10px;
-	max-width: 960px;
-}
-
-main>footer {
-	clear: both;
-}
-
-nav {
-	min-height: 30px;
-	background-color: brown;
-}
-
-figure {
-	overflow: hidden;
-	float: left;
-	margin: 10px;
-	height: 300px;
-	width: 400px;
-	background-color: #ccc;
-}
-
-figcaption {
-	top: -37px;
-	position: relative;
-}
-
-footer {
-	height: 140px;
-	background-color: olive;
-}
-</style>
-<style>
 .css-slideshow{
   position: relative;
   max-width: 495px;
@@ -106,28 +50,28 @@ footer {
 .css-slideshow figure{
   opacity:0;
 }
-.css-slideshow > figure:nth-child(1) {
+figure:nth-child(1) {
   animation: xfade 48s 42s infinite;
 }
-.css-slideshow > figure:nth-child(2) {
+figure:nth-child(2) {
   animation: xfade 48s 36s infinite;
 }
-.css-slideshow > figure:nth-child(3) {
+figure:nth-child(3) {
   animation: xfade 48s 30s infinite;
 }
-.css-slideshow > figure:nth-child(4) {
+figure:nth-child(4) {
   animation: xfade 48s 24s infinite;
 }
-.css-slideshow > figure:nth-child(5) {
+figure:nth-child(5) {
   animation: xfade 48s 18s infinite;
 }
-.css-slideshow > figure:nth-child(6) {
+figure:nth-child(6) {
   animation: xfade 48s 12s infinite;
 }
-.css-slideshow > figure:nth-child(7) {
+figure:nth-child(7) {
   animation: xfade 48s 6s infinite;
 }
-.css-slideshow > figure:nth-child(8) {
+figure:nth-child(8) {
   animation: xfade 48s 0s infinite;
 }
 
@@ -149,87 +93,9 @@ footer {
   }
 }
 </style>
-<style>
-#product-nav {
-	float: left;
-	width: 250px;
-	height: 300px;
-}
-
-#slider {
-  overflow: hidden;
-  float: left;
-  margin: 10px;
-  height: 300px;
-  width: 400px;
-  background-color: #ccc;
-}
-
-#discount-product {
-	width: 250px;
-	overflow: hidden;
-	float: left;
-	margin: 10px;
-	height: 300px;
-	background-color: #ccc;
-}
-
-#left-long-banner {
-	height: 100px;
-}
-
-#right-long-banner {
-	height: 100px;
-}
-
-#popular-product {
-	overflow: hidden;
-	float: left;
-	margin: 10px;
-	height: 300px;
-	width: 400px;
-	background-color: #ccc;
-}
-
-#top-article {
-	float: left;
-	width: 400px;
-}
-</style>
-<style>
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-}
-</style>
 </head>
 <body>
-
-	<header role="banner">
-		<button onclick="location.reload();">Reload page</button>
-	</header>
-
-	<main role="main">
-
-	<nav id="page-nav" role="navigation"></nav>
-	<nav id="product-nav" role="navigation"></nav>
-
- <div  id="slider" role="complementary" role="complementary" class="css-slideshow">
+<div class="css-slideshow">
   <figure>
     <img src="http://themarklee.com/wp-content/uploads/2013/10/class-header-css3.jpg" alt="class-header-css3" width="495" height="370" class="alignnone size-full wp-image-172" /><figcaption><strong>CSS3:</strong> CSS3 delivers a wide range of stylization and effects, enhancing the web app without sacrificing your semantic structure or performance. Additionally Web Open Font Format (WOFF) provides typographic flexibility and control far beyond anything the web has offered before.</figcaption>
   </figure>
@@ -255,62 +121,7 @@ footer {
     <img src="http://themarklee.com/wp-content/uploads/2013/10/class-header-performance.jpg" alt="class-header-performance" width="495" height="370" class="alignnone size-large wp-image-173" /><figcaption><strong>Performance &amp; Integration:</strong> Make your Web Apps and dynamic web content faster with a variety of techniques and technologies such as Web Workers and XMLHttpRequest 2. No user should ever wait on your watch.</figcaption>
   </figure>
   </div>
+<p class="css-slideshow-attr"><a href="http://www.w3.org/html/logo/" target="_top">Images and captions are from the W3C</a></p>
 
-	<article id="discount-product" role="article" itemscope itemtype="http://schema.org/Product">
-		<a itemprop="url" href="http://www.tirolershop.nl/prod/hansielein-tirolerbroek/8370">
-			<h1 itemprop="name">Hansielein tirolerbroek</h1>
-		</a> <a href="#" title="#" itemprop="url"> <img src="http://placehold.it/400x300" height="300" width="400"
-			alt="A descriptive text of the image" itemprop="image"
-		/>
-		</a>
-
-		<p itemprop="description">Hansielein tirolerbroek.</p>
-		Model: <span itemprop="model">Heer 50</span>
-		<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-			<span itemprop="price">€ 26,90</span>
-		</div>
-		<a href="#" title="Add to Cart"><span>Add to Cart</span></a>
-	</article>
-
-
-	<figure id="left-long-banner" role="complementary">
-		<img src="http://placehold.it/400x300" height="300" width="400" alt="A descriptive text of the image" />
-		<figcaption>A descriptive caption for the image.</figcaption>
-	</figure>
-
-	<figure id="right-long-banner" role="complementary">
-		<img src="http://placehold.it/400x300" height="300" width="400" alt="A descriptive text of the image" />
-		<figcaption>A descriptive caption for the image.</figcaption>
-	</figure>
-
-
-	<article id="popular-product" role="article" itemscope itemtype="http://schema.org/Product">
-		<a itemprop="url" href="http://www.tirolershop.nl/prod/hansielein-tirolerbroek/8370">
-			<h1 itemprop="name">Hansielein tirolerbroek</h1>
-		</a> <a href="#" title="#" itemprop="url"> <img src="http://placehold.it/400x300" height="300" width="400"
-			alt="A descriptive text of the image" itemprop="image"
-		/>
-		</a>
-
-		<p itemprop="description">Hansielein tirolerbroek.</p>
-		Model: <span itemprop="model">Heer 50</span>
-		<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-			<span itemprop="price">€ 26,90</span>
-		</div>
-		<a href="#" title="Add to Cart"><span>Add to Cart</span></a>
-	</article>
-
-
-	<article id="top-article" role="article">
-		<h1>Tirolershop - Feestartikelen voor de Oktoberfesten en bierfeesten</h1>
-	</article>
-
-	<footer role="contentinfo">
-		<nav role="navigation"></nav>
-	</footer> </main>
-
-	<footer> </footer>
-
-    <script src="js/prefixfree.min.js"></script>
 </body>
 </html>
