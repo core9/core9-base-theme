@@ -1,8 +1,14 @@
+/* All pages */
+
 #product-nav {
   float: left;
   width: 250px;
   height: 300px;
 }
+
+
+/* Start front page */
+
 
 #slider {
   overflow: hidden;
@@ -43,3 +49,5 @@
   float: left;
   width: 400px;
 }
+
+/* End front page */
