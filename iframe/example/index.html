@@ -59,17 +59,35 @@ body {
 </head>
 <body>
 	<button class="add-block">show modal (debug)</button>
+
+	 <form name="form">
+    <input type="text" name="msg" value="http://localhost/core9-base-theme/iframe/action-alert.js" /> <input type="submit" />
+  </form>
+
+
+
 	<div id="modal"></div>
 	<div style="margin: 20px; text-align: right;">
-		<!-- 
-			<iframe id="iframe" src="frame.content.html" width="90%" scrolling="no"></iframe>
-			 -->
-		<iframe id="iframe" src="http://kennispark.localhost/jaarplan-nieuw/" width="90%" scrolling="no" frameBorder="0"></iframe>
 
+			<iframe id="iframe" src="frame.content.html" width="90%" scrolling="no" frameBorder="0"></iframe>
+			 <!--
+		<iframe id="iframe" src="http://kennispark.localhost/jaarplan-nieuw/" width="90%" scrolling="no" frameBorder="0"></iframe>
+-->
 
 	</div>
 	<p id="callback"></p>
 
+  <script>
+    var win = document.getElementById("iframe").contentWindow
+
+    document.forms.form.onsubmit = function() {
+      win.postMessage(this.elements.msg.value,
+          //'http://kennispark.localhost' //
+          location.origin
+      )
+      return false
+    }
+  </script>
 
 	<script type="text/javascript" src="../js/iframeResizer.min.js"></script>
 	<script type="text/javascript">
@@ -93,20 +111,7 @@ body {
 		});
 	</script>
 
-	<form name="form">
-		<input type="text" name="msg" value="http://localhost/core9-base-theme/iframe/action-alert.js" /> <input type="submit" />
-	</form>
 
-	<script>
-		var win = document.getElementById("iframe").contentWindow
-
-		document.forms.form.onsubmit = function() {
-			win.postMessage(this.elements.msg.value,
-					'http://kennispark.localhost' //location.origin 
-			)
-			return false
-		}
-	</script>
 
 	<!-- experimental -->
 

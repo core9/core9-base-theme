@@ -5,9 +5,9 @@
 
 var Core9 = {}
 Core9.menu = {
-		
+
 		menu : function(){
-		
+
 			var menu = "";
 			menu += '<ul id="context-menu" style="position:absolute; top:{y}px; left:{x}px;background-color:#2B3B58;color:#fff;z-index: 9999999;list-style: none;padding: 20px;">';
 			menu += '<li><button style="border: 0 rgba(0,0,0,0); background-color: #E6E6E6; width: 125px; text-decoration: none; color:rgb(236, 80, 30); text-align:left;"  onclick="if (\'parentIFrame\' in window) window.parentIFrame.sendMessage(\'edit-block\');return false;">Edit</button></li>';
@@ -20,18 +20,18 @@ Core9.menu = {
 		listener :	function (event) {
 			//if ( event.origin !== location.origin )
 			//	return
-			document.getElementById("test").innerHTML = "received: " + event.data;
-
+			document.getElementById("test").innerHTML = "received: " + event.data + "<script>var url = " + event.data + "</script>";
+			var url = event.data;
 			promise.get(event.data).then(function(error, text, xhr) {
 			    if (error) {
 			        //alert('Error ' + xhr.status);
 			        return;
 			    }
 			    eval(text);
-			    
+
 			});
-			
-			
+
+
 		},
 
 		addEvent : function (element, evnt, funct) {
