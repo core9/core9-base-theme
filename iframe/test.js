@@ -6,7 +6,7 @@ Core9.menu = {
 		menu : function(){
 		
 			var menu = "";
-			menu += '<ul id="context-menu" style="position:absolute; top:{y}px; left:{x}px;background-color:#ccc;color:#fff;">';
+			menu += '<ul id="context-menu" style="position:absolute; top:{y}px; left:{x}px;background-color:#ccc;color:#fff;z-index: 9999999;">';
 			menu += '<li><button onclick="alert(\'click 1\')">Look, {who}</button></li>';
 			menu += '<li><button onclick="alert(\'click 2\')">no JavaScript!</button></li>';
 			menu += '<li><button onclick="alert(\'click 3\')">Pretty nice, right?</button></li>';
@@ -15,13 +15,12 @@ Core9.menu = {
 		},
 
 		listener :	function (event) {
-			if ( event.origin !== location.origin )
-				return
+			//if ( event.origin !== location.origin )
+			//	return
 			document.getElementById("test").innerHTML = "received: " + event.data
 		},
 
 		addEvent : function (element, evnt, funct) {
-			
 			if(element == null){
 				if (window.attachEvent) {
 					window.attachEvent('on' + evnt, funct);
@@ -35,11 +34,6 @@ Core9.menu = {
 					return element.addEventListener(evnt, funct, false);
 				}
 			}
-			
-
-			
-
-			
 		},
 
 		t : function (s, d) {
@@ -50,7 +44,7 @@ Core9.menu = {
 
 		setContextMenu :	function () {
 			Core9.menu.addEvent(document.body, 'click', Core9.menu.removeContextMenu);
-			var contextMenuElements = document.getElementsByClassName('onclick-menu');
+			var contextMenuElements = document.getElementsByClassName('mega-entry'); // class for context menu
 			for (var i = 0; i < contextMenuElements.length; i++) {
 				Core9.menu.addEvent(contextMenuElements[i], 'contextmenu', Core9.menu.clicked);
 			}
