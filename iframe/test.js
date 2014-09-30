@@ -9,7 +9,7 @@ Core9.menu = {
 			menu += '<ul id="context-menu" style="position:absolute; top:{y}px; left:{x}px;background-color:#ccc;color:#fff;z-index: 9999999;">';
 			menu += '<li><button onclick="alert(\'click 1\')">Look, {who}</button></li>';
 			menu += '<li><button onclick="alert(\'click 2\')">no JavaScript!</button></li>';
-			menu += '<li><button onclick="alert(\'click 3\')">Pretty nice, right?</button></li>';
+			menu += '<li><button onclick="if (\'parentIFrame\' in window) window.parentIFrame.sendMessage(\'edit-block\');return false;">Edit</button></li>';
 			menu += '</ul>';
 			return menu;
 		},
