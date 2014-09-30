@@ -3,7 +3,7 @@ ul {
   list-style-type:none;
   margin:0;
   padding:0;
-  position: absolute;
+  _position: absolute;
 }
 
 /*Create a horizontal list with spacing*/
@@ -11,6 +11,7 @@ li {
   display:inline-block;
   float: left;
   margin-right: 1px;
+  width: 100%;
 }
 
 /*Style for menu links*/
