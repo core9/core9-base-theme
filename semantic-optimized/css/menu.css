@@ -38,6 +38,8 @@ li:hover ul a {
   color: #2f3036;
   height: 40px;
   line-height: 40px;
+  margin-left:20px;
+  z-index:99999;
 }
 
 /*Hover state for dropdown links*/
