@@ -1,4 +1,4 @@
 
-alert("hi");
 
-alert(url);
+
+alert(url.split('?')[1]);
