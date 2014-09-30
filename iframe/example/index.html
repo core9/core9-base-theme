@@ -1,192 +1,179 @@
-<!DOCTYPE html> 
-<html> 
-	<head> 
-		<meta charset="utf-8"> 
-		<title>iFrame message passing test</title> 
-		<meta name="description" content="iFrame message passing test"> 
-		<meta name="viewport" content="width=device-width">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<style type="text/css">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>iFrame message passing test</title>
+<meta name="description" content="iFrame message passing test">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<style type="text/css">
 body {
-  margin: 0px;
-  padding: 0px;
+	margin: 0px;
+	padding: 0px;
 }
 
 #wizard-wrapper {
-  display: none;
-  position: fixed;
-  top: 100px;
-  background-color: #fff;
-  z-index: 9999;
-  width: 768px;
-  left: 50%;
-  margin-left: -384px;
+	display: none;
+	position: fixed;
+	top: 100px;
+	background-color: #fff;
+	z-index: 9999;
+	width: 768px;
+	left: 50%;
+	margin-left: -384px;
 }
 
 #modal {
-  background-color: #ccc;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9;
-  display: none;
+	background-color: #ccc;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+	display: none;
 }
 
 .modal {
-  background-color: transparent !important;
-  position: relative;
-  width: 100%;
-  height: 100%;
+	background-color: transparent !important;
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
 
 .modal:hover {
-  background-color: #ccc !important;
+	background-color: #ccc !important;
 }
 </style>
 <!-- get jQuery from the google apis -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/jquery.steps.css" media="screen" />
 <script type="text/javascript" src="../js/jquery.steps.min.js"></script>
-	</head> 
-	<body> 
-	  <button class="add-block">add</button>
-	    <div id="modal">
-    <button class="add-block">add</button>
-  </div>
-		<h2>Automagically resizing iFrame</h2>
-		<p>Resize window or click one of the links in the iFrame to watch it resize.</p>
-		<div style="margin:20px;text-align:right;">
-			<!-- 
+</head>
+<body>
+	<button class="add-block">show modal (debug)</button>
+	<div id="modal"></div>
+	<div style="margin: 20px; text-align: right;">
+		<!-- 
 			<iframe id="iframe" src="frame.content.html" width="90%" scrolling="no"></iframe>
 			 -->
-			<iframe id="iframe" src="http://kennispark.localhost/jaarplan-nieuw/" width="90%" scrolling="no"></iframe>
-      
-			
-		</div>
-		<p id="callback">
-		</p>
+		<iframe id="iframe" src="http://kennispark.localhost/jaarplan-nieuw/" width="90%" scrolling="no" frameBorder="0"></iframe>
 
 
-		<script type="text/javascript" src="../js/iframeResizer.min.js"></script> 
-		<script type="text/javascript">
+	</div>
+	<p id="callback"></p>
 
-			iFrameResize({
-				log                     : false,                  // Enable console logging
-				enablePublicMethods     : true,                  // Enable methods within iframe hosted page
-				resizedCallback         : function(messageData){ // Callback fn when resize is received
-					  console.log(messageData);
-				},
-				messageCallback         : function(messageData){ // Callback fn when message is received
-					console.log(messageData);
-					//alert(messageData.message);
-					if(messageData.message == 'edit-block'){
-				        $('#wizard-wrapper').toggle();
-				        $('#modal').toggle();
-					}
-				},
-				closedCallback         : function(id){ // Callback fn when iFrame is closed
-					console.log(id);
+
+	<script type="text/javascript" src="../js/iframeResizer.min.js"></script>
+	<script type="text/javascript">
+		iFrameResize({
+			log : false, // Enable console logging
+			enablePublicMethods : true, // Enable methods within iframe hosted page
+			resizedCallback : function(messageData) { // Callback fn when resize is received
+				console.log(messageData);
+			},
+			messageCallback : function(messageData) { // Callback fn when message is received
+				console.log(messageData);
+				//alert(messageData.message);
+				if (messageData.message == 'edit-block') {
+					$('#wizard-wrapper').toggle();
+					$('#modal').toggle();
 				}
+			},
+			closedCallback : function(id) { // Callback fn when iFrame is closed
+				console.log(id);
+			}
+		});
+	</script>
+
+	<form name="form">
+		<input type="text" name="msg" value="Your message" /> <input type="submit" />
+	</form>
+
+	<script>
+		var win = document.getElementById("iframe").contentWindow
+
+		document.forms.form.onsubmit = function() {
+			win.postMessage(this.elements.msg.value,
+					'http://kennispark.localhost' //location.origin 
+			)
+			return false
+		}
+	</script>
+
+	<!-- experimental -->
+
+	<div id="wizard-wrapper">
+		<div class="content">
+			<button style="float:right;" class="add-block">x</button>
+			<h1>Edit blok</h1>
+      
+			<script>
+				$(function() {
+					$("#wizard").steps({
+						headerTag : "h2",
+						bodyTag : "section",
+						transitionEffect : "slideLeft",
+						stepsOrientation : "vertical"
+					});
+				});
+			</script>
+
+			<div id="wizard">
+				<h2>First Step</h2>
+				<section>
+					<h3>First Step</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nulla nunc. Maecenas arcu sem, hendrerit a tempor quis, sagittis accumsan tellus. In hac habitasse platea dictumst.
+						Donec a semper dui. Nunc eget quam libero. Nam at felis metus. Nam tellus dolor, tristique ac tempus nec, iaculis quis nisi.</p>
+				</section>
+
+				<h2>Second Step</h2>
+				<section>
+					<h3>First Step</h3>
+					<p>Donec mi sapien, hendrerit nec egestas a, rutrum vitae dolor. Nullam venenatis diam ac ligula elementum pellentesque. In lobortis sollicitudin felis non eleifend. Morbi tristique tellus
+						est, sed tempor elit. Morbi varius, nulla quis condimentum dictum, nisi elit condimentum magna, nec venenatis urna quam in nisi. Integer hendrerit sapien a diam adipiscing consectetur. In
+						euismod augue ullamcorper leo dignissim quis elementum arcu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo velit, blandit ac tempor nec, ultrices id diam. Donec
+						metus lacus, rhoncus sagittis iaculis nec, malesuada a diam. Donec non pulvinar urna. Aliquam id velit lacus.</p>
+				</section>
+
+				<h2>Third Step</h2>
+				<section>
+					<h3>First Step</h3>
+					<p>Morbi ornare tellus at elit ultrices id dignissim lorem elementum. Sed eget nisl at justo condimentum dapibus. Fusce eros justo, pellentesque non euismod ac, rutrum sed quam. Ut non mi
+						tortor. Vestibulum eleifend varius ullamcorper. Aliquam erat volutpat. Donec diam massa, porta vel dictum sit amet, iaculis ac massa. Sed elementum dui commodo lectus sollicitudin in auctor
+						mauris venenatis.</p>
+				</section>
+
+				<h2>Forth Step</h2>
+				<section>
+					<h3>First Step</h3>
+					<p>Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula vulputate. Aliquam sed sem tortor. Quisque sed felis ut mauris feugiat iaculis nec ac lectus.
+						Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae. Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo tortor.</p>
+				</section>
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+
+			// wizard
+
+			$("#example-vertical").steps({
+				headerTag : "h3",
+				bodyTag : "section",
+				transitionEffect : "slideLeft",
+				stepsOrientation : "vertical"
 			});
 
+			$('.add-block, .mega-hoverlink').click(function() {
+				console.log(this);
 
-		</script>
+				$('#wizard-wrapper').toggle();
+				$('#modal').toggle();
 
-<form name="form">
-  <input type="text" name="msg" value="Your message"/>
-  <input type="submit"/>
-</form>
+			});
 
-<script>
-
-  var win = document.getElementById("iframe").contentWindow
-
-  document.forms.form.onsubmit = function() {
-    win.postMessage(
-      this.elements.msg.value,
-      'http://kennispark.localhost' //location.origin 
-    )
-    return false
-  }
-
-</script>
-
-<!-- experimental -->
-
-  <div id="wizard-wrapper">
-    <div class="content">
-      <h1>Edit blok</h1>
-
-      <script>
-        $(function() {
-          $("#wizard").steps({
-            headerTag : "h2",
-            bodyTag : "section",
-            transitionEffect : "slideLeft",
-            stepsOrientation : "vertical"
-          });
-        });
-      </script>
-
-      <div id="wizard">
-        <h2>First Step</h2>
-        <section>
-          <h3>First Step</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nulla nunc. Maecenas arcu sem, hendrerit a tempor quis, sagittis accumsan tellus. In hac habitasse platea dictumst.
-            Donec a semper dui. Nunc eget quam libero. Nam at felis metus. Nam tellus dolor, tristique ac tempus nec, iaculis quis nisi.</p>
-        </section>
-
-        <h2>Second Step</h2>
-        <section>
-                  <h3>First Step</h3>
-          <p>Donec mi sapien, hendrerit nec egestas a, rutrum vitae dolor. Nullam venenatis diam ac ligula elementum pellentesque. In lobortis sollicitudin felis non eleifend. Morbi tristique tellus
-            est, sed tempor elit. Morbi varius, nulla quis condimentum dictum, nisi elit condimentum magna, nec venenatis urna quam in nisi. Integer hendrerit sapien a diam adipiscing consectetur. In
-            euismod augue ullamcorper leo dignissim quis elementum arcu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo velit, blandit ac tempor nec, ultrices id diam. Donec
-            metus lacus, rhoncus sagittis iaculis nec, malesuada a diam. Donec non pulvinar urna. Aliquam id velit lacus.</p>
-        </section>
-
-        <h2>Third Step</h2>
-        <section>
-                  <h3>First Step</h3>
-          <p>Morbi ornare tellus at elit ultrices id dignissim lorem elementum. Sed eget nisl at justo condimentum dapibus. Fusce eros justo, pellentesque non euismod ac, rutrum sed quam. Ut non mi
-            tortor. Vestibulum eleifend varius ullamcorper. Aliquam erat volutpat. Donec diam massa, porta vel dictum sit amet, iaculis ac massa. Sed elementum dui commodo lectus sollicitudin in auctor
-            mauris venenatis.</p>
-        </section>
-
-        <h2>Forth Step</h2>
-        <section>
-                  <h3>First Step</h3>
-          <p>Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula vulputate. Aliquam sed sem tortor. Quisque sed felis ut mauris feugiat iaculis nec ac lectus.
-            Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae. Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo tortor.</p>
-        </section>
-      </div>
-    </div>
-
-  </div>
-  <script type="text/javascript">
-    jQuery(document).ready(function() {
-
-
-
-      // wizard
-
-      $("#example-vertical").steps({
-        headerTag : "h3",
-        bodyTag : "section",
-        transitionEffect : "slideLeft",
-        stepsOrientation : "vertical"
-      });
-
-      $('.add-block, .mega-hoverlink').click(function() {
-        console.log(this);
-
-        $('#wizard-wrapper').toggle();
-        $('#modal').toggle();
-
-      });
-
-    });
-  </script>
-	</body> 
+		});
+	</script>
+</body>
 </html>
