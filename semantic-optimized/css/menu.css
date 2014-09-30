@@ -57,6 +57,8 @@ li ul {
 	position: absolute;
 	z-index: 99999;
 	width: 300px;
+	min-height:400px;
+	background-color:#ccc;
 	/*
 	*  display: none;
 	*  // for only vertical
