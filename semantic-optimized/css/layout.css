@@ -1,0 +1,82 @@
+/* All pages */
+
+.content-area {
+  overflow: hidden;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  min-height: 700px;
+  width: 700px;
+  background-color: #ccc;
+}
+
+#product-nav {
+	float: left;
+	width: 250px;
+	height: 300px;
+}
+
+/* Start front page */
+#slider {
+	overflow: hidden;
+	float: left;
+	margin: 10px;
+	height: 300px;
+	width: 400px;
+	background-color: #ccc;
+}
+
+#discount-product {
+	width: 250px;
+	overflow: hidden;
+	float: left;
+	margin: 10px;
+	height: 300px;
+	background-color: #ccc;
+}
+
+#left-long-banner {
+	height: 100px;
+}
+
+#right-long-banner {
+	height: 100px;
+}
+
+#popular-product {
+	overflow: hidden;
+	float: left;
+	margin: 10px;
+	height: 300px;
+	width: 400px;
+	background-color: #ccc;
+}
+
+#top-article {
+	float: left;
+	width: 400px;
+}
+
+/* End front page */
+
+/* Start category page */
+#products {
+
+}
+
+.product {
+  overflow: hidden;
+  float: left;
+  margin: 10px;
+  height: 300px;
+  width: 320px;
+  background-color: #ccc;
+}
+/* End category page */
+
+/* Start product page */
+
+#product {
+
+}
