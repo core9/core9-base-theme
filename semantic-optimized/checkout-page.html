@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Base theme</title>
+<link href="css/core.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/media-queries.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/menu.css" media="all" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.form-vertical>fieldset>label {
+	display: block;
+	width: 100%;
+	height: 31px;
+}
+
+.form-vertical>fieldset>label>input {
+	left: 390px;
+	position: absolute;
+	margin-top: 2px;
+	width: 200px;
+}
+
+input[type="text"] {
+	width: 30px;
+	margin-right: 25px;
+	margin-left: 25px;
+}
+</style>
+</head>
+<body>
+
+	<header role="banner">
+		<button onclick="location.reload();">Reload page</button>
+	</header>
+
+	<main role="main">
+
+	<nav id="page-nav" role="navigation"></nav>
+
+	<nav id="product-nav" role="navigation">
+
+		<label for="show-menu" class="show-menu">Show Menu</label> <input type="checkbox" id="show-menu" role="button">
+		<ul id="menu">
+			<li><a href="front-page.html">Home</a></li>
+			<li><a href="#">About</a>
+				<ul class="hidden">
+					<li><a href="#">Who We Are</a></li>
+					<li><a href="#">What We Do</a></li>
+				</ul></li>
+			<li><a href="category-page.html">Categories</a>
+				<ul class="hidden">
+					<li><a href="#">Photography</a></li>
+					<li><a href="#">Web & User Interface Design</a></li>
+					<li><a href="#">Illustration</a></li>
+				</ul></li>
+			<li><a href="product-page.html">Product</a></li>
+			<li><a href="cart-page.html">Cart</a></li>
+		</ul>
+
+	</nav>
+
+	<section id="product" class="content-area">
+
+		<h1 class="page-header">Afrekenen - Uw gegevens (Stap 1/3)</h1>
+
+		<form class="form-vertical" method="post">
+			<fieldset id="billingaddress">
+				<legend>Factuurgegevens</legend>
+
+				<label for="company">Bedrijfsnaam<input id="company" name="billing[company]" type="text" value=""
+					placeholder="Bedrijfsnaam" class=""
+				></label> <label class="" for="fname">Voornaam<input id="fname" name="billing[fname]" type="text" value=""
+					placeholder="Voornaam" class=""
+				></label> <label class="" for="lname">Achternaam<input id="lname" name="billing[lname]" type="text" value=""
+					placeholder="Achternaam" class=""
+				></label> <label class="" for="street">Straatnaam<input id="street" name="billing[street]" type="text" value=""
+					placeholder="Straatnaam" class=""
+				></label> <label class="" for="textinput">Huisnummer<input id="street2" name="billing[street2]" type="text"
+					value="" placeholder="Huisnummer" class=""
+				></label> <label class="" for="postalcode">Postcode<input id="postalcode" name="billing[postalcode]" type="text"
+					value="" placeholder="Postcode" class=""
+				></label> <label class="" for="city">Plaats<input id="city" name="billing[city]" type="text" value=""
+					placeholder="Plaats" class=""
+				></label><label class="" for="country">Land<select id="country" name="billing[country]" class="" value=""><option
+							value="NL"
+						>Nederland</option>
+						<option value="BE">België</option>
+						<option value="DE">Duitsland</option></select></label> <label class="" for="telephone">Telefoonnummer<input id="telephone"
+					name="billing[telephone]" type="text" value="" placeholder="Telefoonnummer" class=""
+				></label> <label class="" for="telephone">E-mailadres<input id="email" name="billing[email]" type="text" value=""
+					placeholder="E-mail adres" class=""
+				></label>
+			</fieldset>
+			<fieldset id="shippingaddress">
+				<legend>Verzendgegevens</legend>
+
+				<label for="company">Bedrijfsnaam<input id="company" name="shipping[company]" type="text" value=""
+					placeholder="Bedrijfsnaam" class=""
+				></label> <label class="" for="fname">Voornaam<input id="fname" name="shipping[fname]" type="text" value=""
+					placeholder="Voornaam" class=""
+				></label> <label class="" for="lname">Achternaam<input id="lname" name="shipping[lname]" type="text" value=""
+					placeholder="Achternaam" class=""
+				></label> <label class="" for="street">Straatnaam<input id="street" name="shipping[street]" type="text" value=""
+					placeholder="Straatnaam" class=""
+				></label> <label class="" for="textinput">Huisnummer<input id="street2" name="shipping[street2]" type="text"
+					value="" placeholder="Huisnummer" class=""
+				></label> <label class="" for="postalcode">Postcode<input id="postalcode" name="shipping[postalcode]" type="text"
+					value="" placeholder="Postcode" class=""
+				></label> <label class="" for="city">Plaats<input id="city" name="shipping[city]" type="text" value=""
+					placeholder="Plaats" class=""
+				></label><label class="" for="country">Land<select id="country" name="shipping[country]" class="" value=""><option
+							value="NL"
+						>Nederland</option>
+						<option value="BE">België</option>
+						<option value="DE">Duitsland</option></select></label> <label class="" for="telephone">Telefoonnummer<input id="telephone"
+					name="shipping[telephone]" type="text" value="" placeholder="Telefoonnummer" class=""
+				></label> <label class="" for="telephone">E-mailadres<input id="email" name="shipping[email]" type="text" value=""
+					placeholder="E-mail adres" class=""
+				></label>
+			</fieldset>
+			<fieldset>
+				<legend>Opmerkingen</legend>
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="textarea">Opmerking</label>
+					<div class="col-md-8">
+						<textarea class="form-control" id="remark" name="remark"></textarea>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Betaling</legend>
+				<label class="" for="paymentmethod">Betaalmethode<label><input type="radio" name="paymentmethod"
+						value="ogone"
+					>iDEAL, Creditcard of PayPal</label><label><input type="radio" name="paymentmethod" value="prepaid">Bankoverschrijving</label></label>
+			</fieldset>
+			<fieldset>
+				<legend>Volgende stap</legend>
+				<button type="submit" class="btn btn-success">Ga naar stap 2</button>
+			</fieldset>
+		</form>
+
+	</section>
+
+	<footer role="contentinfo">
+		<nav role="navigation"></nav>
+	</footer> </main>
+
+	<footer> </footer>
+
+	<script src="js/prefixfree.min.js"></script>
+</body>
+</html>
