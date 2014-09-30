@@ -23,10 +23,25 @@ Core9.menu = {
 		},
 
 		addEvent : function (element, evnt, funct) {
-			if (element.attachEvent)
-				return element.attachEvent('on' + evnt, funct);
-			else
-				return element.addEventListener(evnt, funct, false);
+			
+			if(element == null){
+				if (window.attachEvent) {
+					window.attachEvent('on' + evnt, funct);
+				} else {
+					window.addEventListener(evnt, funct, false);
+				}
+			}else{
+				if (element.attachEvent){
+					return element.attachEvent('on' + evnt, funct);
+				}else if (element.addEventListener){
+					return element.addEventListener(evnt, funct, false);
+				}
+			}
+			
+
+			
+
+			
 		},
 
 		t : function (s, d) {
@@ -53,7 +68,7 @@ Core9.menu = {
 		showMenu :	function (x, y) {
 			Core9.menu.removeContextMenu();
 
-			var menuObj = t(Core9.menu.menu, {
+			var menuObj = Core9.menu.t(Core9.menu.menu(), {
 				who : "JavaScript",
 				x : x,
 				y : y
@@ -70,14 +85,8 @@ Core9.menu = {
 
 
 
+Core9.menu.addEvent(null, "message", Core9.menu.listener, false)
+Core9.menu.addEvent(null, "onmessage", Core9.menu.listener)
 
-
-
-
-if (window.addEventListener) {
-	Core9.menu.addEvent("message", Core9.menu.listener, false);
-} else {
-	Core9.menu.addEvent("onmessage", Core9.menu.listener);
-}
 document.body.innerHTML += '<div id="test">Send me a message!</div>';
 Core9.menu.setContextMenu();
