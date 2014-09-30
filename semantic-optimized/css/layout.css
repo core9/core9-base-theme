@@ -1,4 +1,16 @@
 /* All pages */
+
+.content-area {
+  overflow: hidden;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  min-height: 700px;
+  width: 700px;
+  background-color: #ccc;
+}
+
 #product-nav {
 	float: left;
 	width: 250px;
@@ -48,16 +60,9 @@
 
 /* End front page */
 
-/* Start product page */
+/* Start category page */
 #products {
-	overflow: hidden;
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
-	margin-bottom: 10px;
-	min-height: 700px;
-	width: 700px;
-	background-color: #ccc;
+
 }
 
 .product {
@@ -68,5 +73,10 @@
   width: 320px;
   background-color: #ccc;
 }
+/* End category page */
 
+/* Start product page */
 
+#product {
+
+}
