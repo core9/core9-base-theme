@@ -52,17 +52,6 @@ li:hover ul a:hover {
 /* horizontal */
 li ul {
 	display: none;
-	left: 240px;
-	top: 40px;
-	position: absolute;
-	z-index: 99999;
-	width: 300px;
-	min-height:400px;
-	background-color:#ccc;
-	/*
-	*  display: none;
-	*  // for only vertical
-	*/
 }
 
 /*Make dropdown links vertical*/
@@ -108,19 +97,34 @@ input[type=checkbox]:checked ~ #menu {
 @media screen and (max-width : 760px) {
 	/*Make dropdown links appear inline*/
 	ul {
-		position: static;
-		display: none;
+		_position: static;
+		_display: none;
 	}
 	/*Create vertical spacing*/
 	li {
-		margin-bottom: 1px;
+		_margin-bottom: 1px;
 	}
 	/*Make all menu links full width*/
 	ul li, li a {
-		width: 100%;
+		_width: 100%;
 	}
 	/*Display 'show menu' link*/
 	.show-menu {
-		display: block;
+		_display: block;
+	}
+}
+
+@media screen and (min-width : 760px) {
+	/*Hide dropdown links until they are needed */
+	/* horizontal */
+	li ul {
+		display: none;
+		left: 240px;
+		top: 40px;
+		position: absolute;
+		z-index: 99999;
+		width: 300px;
+		min-height: 400px;
+		background-color: #ccc;
 	}
 }

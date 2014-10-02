@@ -1,12 +1,12 @@
 .css-slideshow{
   position: relative;
-  max-width: 495px;
+  _max-width: 495px;
   height: 370px;
   margin: 5em auto .5em auto;
 }
 .css-slideshow figure{
   margin: 0;
-  max-width: 495px;
+  _max-width: 495px;
   height: 370px;
   background: #000;
   position: absolute;
@@ -29,7 +29,7 @@
   opacity: 1;
 }
 .css-slideshow-attr{
-  max-width: 495px;
+  _max-width: 495px;
   text-align: right;
   font-size: .7em;
   font-style: italic;
