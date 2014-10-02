@@ -24,6 +24,8 @@ main {
 
 main>footer {
 	clear: both;
+	position: relative;
+	top: 10px;
 }
 
 nav {
