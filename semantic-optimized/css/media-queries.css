@@ -81,27 +81,27 @@
 		max-width: 1140px;
 	}
 	#product-nav {
-		width: 260px;
+		max-width: 260px;
 	}
 	#slider {
 		display: block;
 	}
 	#discount-product {
 		margin-left: 15px;
-		width: 180px;
+		max-width: 180px;
 	}
 	#left-long-banner {
-		width: 570px;
+		max-width: 570px;
 	}
 	#right-long-banner {
-    width: 570px;
+    max-width: 570px;
 	}
 	#popular-product {
 		margin-top: 15px;
-		width: 260px;
+		max-width: 260px;
 	}
 	#top-article {
-		width: 865px;
+		max-width: 865px;
 		margin-left: 15px;
 	}
 }
