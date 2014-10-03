@@ -7,48 +7,28 @@
 	background-color: #ccc;
 }
 
-.product {
-	margin: 10px;
-	height: 300px;
-	width: 320px;
-	background-color: #ccc;
-}
-
 #page-nav {
 	height: 50px;
 }
 
 #product-nav {
+	margin-top: 0px;
 	min-height: 300px;
 }
 
 #slider {
 	display: none;
-}
-
-#discount-product {
-	margin-top: 15px;
-	height: 285px;
 	background-color: #ccc;
 }
 
-#left-long-banner {
+.banner {
 	height: 100px;
 }
 
-#right-long-banner {
-	height: 100px;
-}
-
-#popular-product {
+.product {
 	margin-top: 15px;
 	height: 300px;
 	background-color: #ccc;
-}
-
-#top-article {
-	margin-top: 15px;
-	background-color: #fff;
 }
 
 /* Custom, iPhone Retina */
@@ -75,31 +55,27 @@
 		max-width: 260px;
 	}
 	#slider {
-		overflow: hidden;
-		float: left;
-		margin-top: 15px;
 		margin-left: 15px;
 		width: 670px;
 		height: 285px;
-		background-color: #ccc;
-		background-color: #ccc;
 		display: block;
 	}
-	#discount-product {
-		margin-left: 15px;
-		max-width: 180px;
-	}
-	#left-long-banner {
+	.banner {
 		max-width: 570px;
 	}
-	#right-long-banner {
-		max-width: 570px;
-	}
-	#popular-product {
+	.product {
 		margin-top: 15px;
-		max-width: 260px;
+		margin-left: 15px;
 	}
-	#top-article {
+	.discount {
+		width: 180px;
+		height: 285px;
+	}
+	.popular {
+		margin-left: 0px;
+		width: 260px;
+	}
+	.article {
 		max-width: 865px;
 		margin-left: 15px;
 	}

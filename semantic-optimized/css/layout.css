@@ -1,6 +1,8 @@
 /* All pages */
 .block {
+	margin-top: 15px;
 	overflow: hidden;
 	float: left;
 	width: 100%;
+	background-color: #fff;
 }
