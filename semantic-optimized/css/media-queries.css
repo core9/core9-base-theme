@@ -23,22 +23,13 @@
 }
 
 #slider {
-	overflow: hidden;
-	float: left;
-	margin-top: 15px;
-	margin-left: 15px;
-	width: 670px;
-	height: 285px;
-	background-color: #ccc;
 	display: none;
-	background-color: #ccc;
 }
 
 #discount-product {
-  margin-top: 15px;
-
-  height: 285px;
-  background-color: #ccc;
+	margin-top: 15px;
+	height: 285px;
+	background-color: #ccc;
 }
 
 #left-long-banner {
@@ -84,6 +75,14 @@
 		max-width: 260px;
 	}
 	#slider {
+		overflow: hidden;
+		float: left;
+		margin-top: 15px;
+		margin-left: 15px;
+		width: 670px;
+		height: 285px;
+		background-color: #ccc;
+		background-color: #ccc;
 		display: block;
 	}
 	#discount-product {
@@ -94,7 +93,7 @@
 		max-width: 570px;
 	}
 	#right-long-banner {
-    max-width: 570px;
+		max-width: 570px;
 	}
 	#popular-product {
 		margin-top: 15px;
