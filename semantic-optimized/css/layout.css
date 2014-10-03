@@ -1,7 +1,6 @@
 /* All pages */
-
 .block {
-  overflow: hidden;
-  float: left;
+	overflow: hidden;
+	float: left;
+	width: 100%;
 }
-
