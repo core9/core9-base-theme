@@ -4,7 +4,7 @@ body {
 }
 
 header {
-  background-color: #ccc;
+  background-color: #ffc;
 }
 
 main {
@@ -19,9 +19,23 @@ nav {
 }
 
 figure {
-  background-color: #ccc;
+  background-color: #fff;
 }
 
 footer {
   background-color: olive;
+}
+
+/* specials */
+
+#slider {
+  background-color: #fff;
+}
+
+.content-area {
+  background-color: #fff;
+}
+
+.product {
+  background-color: #fff;
 }

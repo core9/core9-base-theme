@@ -4,11 +4,9 @@
 }
 
 body {
-	background-color: azure;
 }
 
 header {
-	background-color: #ccc;
 	height: 150px;
 	text-align: center;
 	display: none;
@@ -19,7 +17,6 @@ main {
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 15px;
-	background-color: cadetblue;
 }
 
 main>footer {
@@ -29,15 +26,12 @@ main>footer {
 }
 
 nav {
-	background-color: brown;
 }
 
 figure {
 	margin-top: 15px;
-	background-color: #ccc;
 }
 
 footer {
 	height: 140px;
-	background-color: olive;
 }
