@@ -1,0 +1,27 @@
+
+body {
+  background-color: azure;
+}
+
+header {
+  background-color: #ccc;
+}
+
+main {
+  background-color: cadetblue;
+}
+
+main>footer {
+}
+
+nav {
+  background-color: brown;
+}
+
+figure {
+  background-color: #ccc;
+}
+
+footer {
+  background-color: olive;
+}
