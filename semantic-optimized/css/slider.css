@@ -77,7 +77,7 @@
   animation: xfade 48s 0s infinite;
 }
 
-@keyframes xfade{
+@keyframes xfade {
   0%{
     opacity: 1;
   }
