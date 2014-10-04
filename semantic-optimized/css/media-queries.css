@@ -56,6 +56,14 @@
 	max-width: 13em;
 }
 
+footer > nav > ul {
+	float:left;
+	max-width:25em;
+	margin-left: 9em;
+
+}
+
+
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
 }

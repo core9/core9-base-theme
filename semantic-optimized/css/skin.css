@@ -4,15 +4,21 @@ body {
 }
 
 header {
-  background-color: #ffc;
+  background-color: #fff;
 }
 
 main {
-  background-color: cadetblue;
+  background-color: #f2f2f2;
 }
 
 main>footer {
+	background-color: #ccc;
 }
+
+footer > nav {
+  background-color: olive;
+}
+
 
 nav {
   background-color: brown;
@@ -46,7 +52,7 @@ footer {
 }
 
 .page-nav-middle {
-  background-color: #ccc;
+  background-color: #fff;
   color: #fff;
 }
 
