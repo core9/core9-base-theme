@@ -10,15 +10,7 @@ if (elm.style.animationName !== undefined) {
 }
 
 if (animation === false) {
-	for (var i = 0; i < domPrefixes.length; i++) {
-		if (elm.style[domPrefixes[i] + 'AnimationName'] !== undefined) {
-			pfx = domPrefixes[i];
-			animationstring = pfx + 'Animation';
-			keyframeprefix = '-' + pfx.toLowerCase() + '-';
-			animation = true;
-			break;
-		}
-	}
+	// ai no animation support
 }
 /*
  * end test if css animations are available
