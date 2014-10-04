@@ -1,6 +1,7 @@
 /*
  * start test if css animations are available
  */
+var elem = document.createElement("detect");
 var animation = false,
     animationstring = 'animation',
     keyframeprefix = '',
