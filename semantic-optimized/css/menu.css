@@ -3,7 +3,6 @@ ul#menu {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	_position: absolute;
 }
 
 /*Create a horizontal list with spacing*/
@@ -94,25 +93,6 @@ input[type=checkbox]:checked ~ #menu {
 }
 
 /*Responsive Styles*/
-@media screen and (max-width : 760px) {
-	/*Make dropdown links appear inline*/
-	ul {
-		_position: static;
-		_display: none;
-	}
-	/*Create vertical spacing*/
-	li {
-		_margin-bottom: 1px;
-	}
-	/*Make all menu links full width*/
-	ul li, li a {
-		_width: 100%;
-	}
-	/*Display 'show menu' link*/
-	.show-menu {
-		_display: block;
-	}
-}
 
 @media screen and (min-width : 760px) {
 	/*Hide dropdown links until they are needed */
