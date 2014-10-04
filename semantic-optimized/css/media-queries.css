@@ -10,7 +10,28 @@
 	display: inline;
 }
 
-#page-nav {
+.page-nav {
+	height: 50px;
+}
+
+.page-nav-left {
+	width: 26em;
+	background-color: #000;
+	color: #fff;
+	height: 50px;
+}
+
+.page-nav-middle {
+	width: 69.7em;
+	background-color: #ccc;
+	color: #fff;
+	height: 50px;
+}
+
+.page-nav-right {
+	width: 18em;
+	background-color: #000;
+	color: #fff;
 	height: 50px;
 }
 
@@ -41,7 +62,7 @@
 }
 
 .product-image {
-	max-width:13em;
+	max-width: 13em;
 }
 
 /* Custom, iPhone Retina */
