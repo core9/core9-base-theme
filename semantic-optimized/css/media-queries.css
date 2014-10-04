@@ -1,9 +1,13 @@
 .content-area {
-	margin-top: 15px;
-	margin-left: 15px;
-	margin-bottom: 15px;
+	margin-top: 1.5em;
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
 	min-height: 700px;
 	width: 100%;
+}
+
+.inline {
+	display: inline;
 }
 
 #page-nav {
@@ -12,7 +16,7 @@
 
 #product-nav {
 	margin-top: 0px;
-	min-height: 300px;
+	min-height: 30em;
 }
 
 #slider {
@@ -23,9 +27,21 @@
 	height: 100px;
 }
 
-.product {
-	margin-top: 15px;
+.popular {
+	margin-left: 0px;
+	margin-top: 1.5em;
+	max-width: 33em;
 	height: 300px;
+}
+
+.product {
+	margin-top: 1.5em;
+	max-width: 33em;
+	height: 300px;
+}
+
+.product-image {
+	max-width:13em;
 }
 
 /* Custom, iPhone Retina */
@@ -34,6 +50,11 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
+	#slider {
+		max-width: 67em;
+		height: 285px;
+		display: block;
+	}
 }
 
 /* Small Devices, Tablets */
@@ -46,35 +67,32 @@
 		margin-top: -60px;
 		margin-bottom: -90px;
 		min-height: 1000px;
-		max-width: 1140px;
+		max-width: 114em;
 	}
 	#product-nav {
-		max-width: 260px;
+		max-width: 26em;
 	}
 	#slider {
-		margin-left: 15px;
-		width: 670px;
-		height: 285px;
-		display: block;
+		margin-left: 1.5em;
 	}
 	.banner {
-		max-width: 570px;
+		max-width: 57em;
 	}
 	.product {
-		margin-top: 15px;
-		margin-left: 15px;
+		margin-top: 1.5em;
+		margin-left: 1.5em;
 	}
 	.discount {
-		width: 180px;
+		width: 18em;
 		height: 285px;
 	}
 	.popular {
 		margin-left: 0px;
-		width: 260px;
+		max-width: 26em;
 	}
 	.article {
-		max-width: 865px;
-		margin-left: 15px;
+		max-width: 86.5em;
+		margin-left: 1.5em;
 	}
 }
 

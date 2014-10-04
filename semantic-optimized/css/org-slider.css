@@ -1,79 +1,68 @@
-.css-slideshow {
+.css-slideshow{
   position: relative;
+  _max-width: 495px;
   height: 370px;
+  margin: 5em auto .5em auto;
 }
-
-.css-slideshow figure {
+.css-slideshow figure{
   margin: 0;
+  _max-width: 495px;
   height: 370px;
   background: #000;
   position: absolute;
 }
-
-.css-slideshow img {
+.css-slideshow img{
   box-shadow: 0 0 2px #666;
 }
-
-.css-slideshow figcaption {
+.css-slideshow figcaption{
   position: absolute;
   top: 0;
   color: #fff;
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0,0,0, .3);
   font-size: .8em;
   padding: 8px 12px;
   opacity: 0;
   transition: opacity .5s;
 }
-
-.css-slideshow:hover figure figcaption {
+.css-slideshow:hover figure figcaption{
   transition: opacity .5s;
   opacity: 1;
 }
-
-.css-slideshow-attr {
+.css-slideshow-attr{
+  _max-width: 495px;
   text-align: right;
   font-size: .7em;
   font-style: italic;
-  margin: 0 auto;
+  margin:0 auto;
 }
-
-.css-slideshow-attr a {
+.css-slideshow-attr a{
   color: #666;
 }
-
-.css-slideshow figure {
-  opacity: 0;
+.css-slideshow figure{
+  opacity:0;
 }
-
-.css-slideshow>figure:nth-child(1) {
+.css-slideshow > figure:nth-child(1) {
   animation: xfade 48s 42s infinite;
 }
-
-.css-slideshow>figure:nth-child(2) {
+.css-slideshow > figure:nth-child(2) {
   animation: xfade 48s 36s infinite;
 }
-
-.css-slideshow>figure:nth-child(3) {
+.css-slideshow > figure:nth-child(3) {
   animation: xfade 48s 30s infinite;
 }
-
-.css-slideshow>figure:nth-child(4) {
+.css-slideshow > figure:nth-child(4) {
   animation: xfade 48s 24s infinite;
 }
-
-.css-slideshow>figure:nth-child(5) {
+.css-slideshow > figure:nth-child(5) {
   animation: xfade 48s 18s infinite;
 }
-
-.css-slideshow>figure:nth-child(6) {
+.css-slideshow > figure:nth-child(6) {
   animation: xfade 48s 12s infinite;
 }
-
-.css-slideshow>figure:nth-child(7) {
+.css-slideshow > figure:nth-child(7) {
   animation: xfade 48s 6s infinite;
 }
-
-.css-slideshow>figure:nth-child(8) {
+.css-slideshow > figure:nth-child(8) {
   animation: xfade 48s 0s infinite;
 }
 
