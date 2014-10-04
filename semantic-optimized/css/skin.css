@@ -39,3 +39,18 @@ footer {
 .product {
   background-color: #fff;
 }
+
+.page-nav-left {
+  background-color: #000;
+  color: #fff;
+}
+
+.page-nav-middle {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.page-nav-right {
+  background-color: #000;
+  color: #fff;
+}
