@@ -84,29 +84,3 @@ footer>nav>ul {
 	max-height: 7.5em;
 	margin-left: 10em;
 }
-
-@media only screen and (min-width : 670px) {
-  main {
-    max-width: 67em;
-  }
-
-	.slider {
-    max-width:67em;
-  }
-}
-
-@media only screen and (min-width : 975px) {
-	main {
-		max-width: 94.5em;
-	}
-	 .product-nav {
-  max-width: 26em;
-  display:block;
-  }
-	.slider {
-		margin-left: 1.5em;
-	}
-
-
-
-}

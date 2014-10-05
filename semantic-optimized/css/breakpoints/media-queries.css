@@ -1,2 +1,4 @@
 @import url(min-width-0px.css) (min-width:0px);
+@import url(min-width-670px.css) (min-width:670px);
+@import url(min-width-975px.css) (min-width:975px);
 @import url(min-width-1170px.css) (min-width:1170px);
