@@ -58,18 +58,23 @@ main {
 }
 
 .product-image-box {
-	max-width: 26em;
+	margin-left:1.5em;
+	max-width: 33em;
 }
 
 .product-description {
 	font-size: 2em;
-	max-width: 30em;
+	max-width: 25em;
 }
 
 .product-price {
-	max-width: 42em;
+	max-width: 37em;
 }
 
 .product-cart-button {
 	max-width: 30em;
+}
+
+.product-related {
+	max-width:26em;
 }
