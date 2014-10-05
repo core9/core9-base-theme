@@ -1,5 +1,5 @@
 /**/
-@media only screen and (min-width : 670px) {
+@media only screen and (min-width : 700px) {
 	main {
 		max-width: 67em;
 	}
@@ -7,10 +7,10 @@
 		max-width: 67em;
 	}
 	.popular {
-		max-width: 26em;
+		max-width: 23em;
 	}
 	.article {
 		margin-left: 1.5em;
-		max-width: 39.5em;
+		max-width: 42.5em;
 	}
 }
