@@ -35,13 +35,14 @@ main {
 	max-width: 86.5em;
 }
 
-.discount {
+.product-discount {
+	 margin-left: 1.5em;
 	width: 18em;
 	height: 30em;
 	display: block;
 }
 
-.popular {
+.product-popular {
 	margin-left: 0px;
 	max-width: 26em;
 }

@@ -9,7 +9,6 @@
 	display: inline;
 }
 
-
 .page-nav {
 	height: 50px;
 }
@@ -33,23 +32,22 @@
 	margin-top: 0px;
 	max-width: 100%;
 	min-height: 31.5em;
-	display:none;
+	display: none;
 }
 
 .product {
-  margin-top: 1.5em;
-  max-width: 100%;
-  max-height: 30em;
+	margin-top: 1.5em; max-width : 100%;
+	max-height: 30em;
+	max-width: 100%;
 }
 
 .product-image {
-  max-width: 13em;
+	max-width: 13em;
 }
 
 /** front page **/
-
 .slider {
-	 max-width:67em;
+	max-width: 67em;
 	max-height: 30em;
 }
 
@@ -57,15 +55,15 @@
 	height: 10em;
 }
 
-.discount {
-  display:none;
-	}
+.product-discount {
+	display: none;
+}
 
-.popular {
+.product-popular  {
 	margin-left: 0px;
 	margin-top: 1.5em;
-	max-width: 33em;
-  max-height: 30em;
+	max-width: 100%;
+	max-height: 30em;
 }
 
 .article {
@@ -73,15 +71,12 @@
 }
 
 /** product page **/
-
 .products {
-	margin-left:0em;
-	max-width:100%;
+	margin-left: 0em;
+	max-width: 100%;
 }
 
 /** footer **/
-
-
 footer>nav>ul {
 	float: left;
 	max-width: 25em;
