@@ -16,187 +16,218 @@
 </head>
 <body>
 
-  <header role="banner">
-    <button onclick="location.reload();">Reload page</button>
-  </header>
+	<header role="banner">
+		<button onclick="location.reload();">Reload page</button>
+	</header>
 
-  <main role="main">
+	<main role="main">
 
-  <nav role="navigation">
-    <ul class="page-nav">
-      <li class="page-nav-left"><a class="inline" href="#">PRODUCTEN</a></li>
-      <li class="page-nav-middle"><a class="inline" href="#">HOME</a> <a class="inline" href="#">INFORMATIE</a> <a
-        class="inline" href="#"
-      >CONTACT</a></li>
-      <li class="page-nav-right"><a class="inline" href="#">WINKELWAGEN</a></li>
-    </ul>
-  </nav>
+	<nav role="navigation">
+		<ul class="page-nav">
+			<li class="page-nav-left"><a class="inline" href="#">PRODUCTEN</a></li>
+			<li class="page-nav-middle"><a class="inline" href="#">HOME</a> <a class="inline" href="#">INFORMATIE</a> <a
+				class="inline" href="#"
+			>CONTACT</a></li>
+			<li class="page-nav-right"><a class="inline" href="#">WINKELWAGEN</a></li>
+		</ul>
+	</nav>
 
-  <nav class="block product-nav" role="navigation">
+	<nav class="block product-nav" role="navigation">
 
-    <form>
-      <label for="show-menu" class="show-menu">Show Menu</label> <input type="checkbox" id="show-menu">
-    </form>
-    <ul id="menu">
-      <li><a href="front-page.html">Home</a></li>
-      <li><a href="contact-page.html">Contact</a>
-        <ul class="hidden">
-          <li><a href="#">Who We Are</a></li>
-          <li><a href="#">What We Do</a></li>
-        </ul></li>
-      <li><a href="category-page.html">Categories</a>
-        <ul class="hidden">
-          <li><a href="#">Photography</a></li>
-          <li><a href="#">Web &amp; User Interface Design</a></li>
-          <li><a href="#">Illustration</a></li>
-        </ul></li>
-      <li><a href="product-page.html">Product</a></li>
-      <li><a href="cart-page.html">Cart</a></li>
-      <li><a href="checkout-page.html">Checkout</a></li>
-    </ul>
+		<form>
+			<label for="show-menu" class="show-menu">Show Menu</label> <input type="checkbox" id="show-menu">
+		</form>
+		<ul id="menu">
+			<li><a href="front-page.html">Home</a></li>
+			<li><a href="contact-page.html">Contact</a>
+				<ul class="hidden">
+					<li><a href="#">Who We Are</a></li>
+					<li><a href="#">What We Do</a></li>
+				</ul></li>
+			<li><a href="category-page.html">Categories</a>
+				<ul class="hidden">
+					<li><a href="#">Photography</a></li>
+					<li><a href="#">Web &amp; User Interface Design</a></li>
+					<li><a href="#">Illustration</a></li>
+				</ul></li>
+			<li><a href="product-page.html">Product</a></li>
+			<li><a href="cart-page.html">Cart</a></li>
+			<li><a href="checkout-page.html">Checkout</a></li>
+		</ul>
 
-  </nav>
+	</nav>
 
-  <section class="content-area block product-page">
+	<section class="content-area block checkout-page">
+
+		<div class="item block" style="text-align: left; width: auto;">
+			<h1 class="page-header">Afrekenen - Uw gegevens (Stap 1/3)</h1>
+			<form class="form-vertical" method="post">
+				<fieldset id="billingaddress">
+					<legend>Factuurgegevens</legend>
+					<!-- Text input-->
+					<label for="company">Bedrijfsnaam<input id="company" name="billing[company]" type="text" value=""
+						placeholder="Bedrijfsnaam" class=""
+					></label>
+					<!-- Text input-->
+					<label class="" for="fname">Voornaam<input id="fname" name="billing[fname]" type="text" value=""
+						placeholder="Voornaam" class=""
+					></label>
+					<!-- Text input-->
+					<label class="" for="lname">Achternaam<input id="lname" name="billing[lname]" type="text" value=""
+						placeholder="Achternaam" class=""
+					></label>
+					<!-- Text input-->
+					<label class="" for="street">Straatnaam<input id="street" name="billing[street]" type="text" value=""
+						placeholder="Straatnaam" class=""
+					></label>
+					<!-- Text input-->
+					<label class="" for="textinput">Huisnummer<input id="street2" name="billing[street2]" type="text" value=""
+						placeholder="Huisnummer" class=""
+					></label>
+					<!-- Text input-->
+					<label class="" for="postalcode">Postcode<input id="postalcode" name="billing[postalcode]" type="text"
+						value="" placeholder="Postcode" class=""
+					></label>
+					<!-- Text input-->
+					<label class="" for="city">Plaats<input id="city" name="billing[city]" type="text" value=""
+						placeholder="Plaats" class=""
+					></label><label class="" for="country">Land<select id="country" name="billing[country]" class="" value=""><option
+								value="NL"
+							>Nederland</option>
+							<option value="BE">België</option>
+							<option value="DE">Duitsland</option></select></label>
+					<!-- Text input-->
+					<label class="" for="telephone">Telefoonnummer<input id="telephone" name="billing[telephone]" type="text"
+						value="" placeholder="Telefoonnummer" class=""
+					></label>
+					<!-- Text input-->
+					<label class="" for="telephone">E-mailadres<input id="email" name="billing[email]" type="text" value=""
+						placeholder="E-mail adres" class=""
+					></label>
+				</fieldset>
+				<fieldset id="shippingaddress">
+					<legend>Verzendgegevens</legend>
+					<!-- Text input-->
+					<label for="company">Bedrijfsnaam<input id="company" name="shipping[company]" type="text" value=""
+						placeholder="Bedrijfsnaam" class=""
+					></label>
+					<!-- Text input-->
+					<label class="" for="fname">Voornaam<input id="fname" name="shipping[fname]" type="text" value=""
+						placeholder="Voornaam" class=""
+					></label>
+					<!-- Text input-->
+					<label class="" for="lname">Achternaam<input id="lname" name="shipping[lname]" type="text" value=""
+						placeholder="Achternaam" class=""
+					></label>
+					<!-- Text input-->
+					<label class="" for="street">Straatnaam<input id="street" name="shipping[street]" type="text" value=""
+						placeholder="Straatnaam" class=""
+					></label>
+					<!-- Text input-->
+					<label class="" for="textinput">Huisnummer<input id="street2" name="shipping[street2]" type="text" value=""
+						placeholder="Huisnummer" class=""
+					></label>
+					<!-- Text input-->
+					<label class="" for="postalcode">Postcode<input id="postalcode" name="shipping[postalcode]" type="text"
+						value="" placeholder="Postcode" class=""
+					></label>
+					<!-- Text input-->
+					<label class="" for="city">Plaats<input id="city" name="shipping[city]" type="text" value=""
+						placeholder="Plaats" class=""
+					></label><label class="" for="country">Land<select id="country" name="shipping[country]" class="" value=""><option
+								value="NL"
+							>Nederland</option>
+							<option value="BE">België</option>
+							<option value="DE">Duitsland</option></select></label>
+					<!-- Text input-->
+					<label class="" for="telephone">Telefoonnummer<input id="telephone" name="shipping[telephone]" type="text"
+						value="" placeholder="Telefoonnummer" class=""
+					></label>
+					<!-- Text input-->
+					<label class="" for="telephone">E-mailadres<input id="email" name="shipping[email]" type="text" value=""
+						placeholder="E-mail adres" class=""
+					></label>
+				</fieldset>
+				<fieldset>
+					<legend>Opmerkingen</legend>
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="textarea">Opmerking</label>
+						<div class="col-md-8">
+							<textarea class="form-control" id="remark" name="remark"></textarea>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Betaling</legend>
+					<label class="" for="paymentmethod">Betaalmethode<label><input type="radio" name="paymentmethod"
+							value="ogone"
+						>iDEAL, Creditcard of PayPal</label><label><input type="radio" name="paymentmethod" value="prepaid">Bankoverschrijving</label></label>
+				</fieldset>
+				<fieldset>
+					<legend>Volgende stap</legend>
+					<button type="submit" class="btn btn-success">Ga naar stap 2</button>
+				</fieldset>
+			</form>
+		</div>
+
+	</section>
 
 
+	<footer role="contentinfo">
+		<aside class="logos">
+			<figure class="block logo" role="complementary">
+				<img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
+				<figcaption>A descriptive caption for the image.</figcaption>
+			</figure>
+			<figure class="block logo" role="complementary">
+				<img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
+				<figcaption>A descriptive caption for the image.</figcaption>
+			</figure>
+			<figure class="block logo" role="complementary">
+				<img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
+				<figcaption>A descriptive caption for the image.</figcaption>
+			</figure>
+			<figure class="block logo" role="complementary">
+				<img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
+				<figcaption>A descriptive caption for the image.</figcaption>
+			</figure>
+		</aside>
+		<nav role="navigation">
 
+			<ul>
+				<li><h4>Informatie</h4></li>
+				<li><a href="/page/informatie/1K1WSACSJWDVC#fopshop">Over ons</a></li>
+				<li><a href="/page/informatie/1K1WSACSJWDVC#verzendkosten">Verzendkosten</a></li>
+				<li><a href="/page/informatie/1K1WSACSJWDVC#levering">Verzending</a></li>
+				<li><a href="/page/algemene-voorwaarden/VF6XRST4AP80">Algemene voorwaarden</a></li>
+			</ul>
+			<ul>
+				<li><h4>Categorieën</h4></li>
+				<li><a href="/cat/tiroler-kleding/tiroolse-heren/tirolerbroeken/1JEYSQT90D3CN">Tiroler broeken</a></li>
+				<li><a href="/cat/tiroler-kleding/tiroolse-dames/jurkjes/RLB5M7H958IP">Tiroler jurkjes</a></li>
+				<li><a href="/cat/hoeden/tirolerhoeden/1K253MI00UC0Z">Tirolerhoeden</a></li>
+				<li><a href="/cat/decoraties/wanddecoraties/1JECMK45T9E90">Apres ski decoraties</a></li>
+			</ul>
+			<ul>
+				<li><h4>Klantenservice</h4></li>
+				<li><a href="/">Contact</a></li>
+				<li>Wolter ten Catestraat 27</li>
+				<li>7551 HW Hengelo (o)</li>
+				<li>+31 (0) 74 259 47 14</li>
+			</ul>
+			<ul class="social">
+				<li><h4>Informatie</h4></li>
+				<li><a href="#">Google Plus</a></li>
+				<li><a href="#">Facebook</a></li>
+				<li><a href="#">Twitter</a></li>
+				<li><a href="#">RSS Feed</a></li>
+			</ul>
+		</nav>
+	</footer> </main>
 
-    <p>when the browser is resized to 640 px the table will respond and change its layout</p>
-    <div class="table">
-      <div class="table-head">
-        <div class="column" data-label="Afbeelding">Afbeelding</div>
-        <div class="column" data-label="Afbeelding">Artikel</div>
-        <div class="column" data-label="Hoeveelheid">Hoeveelheid</div>
-        <div class="column" data-label="Prijs">Prijs</div>
-        <div class="column" data-label="Subtotaal">Subtotaal</div>
-        <div class="column" data-label="Verwijderen">Verwijderen</div>
-      </div>
-      <div class="row">
-        <div class="column" data-label="Afbeelding">2311</div>
-        <div class="column" data-label="Artikel">Lorem</div>
-        <div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
-        <div class="column" data-label="Prijs">22</div>
-        <div class="column" data-label="Subtotaal">Web designer</div>
-        <div class="column" data-label="Verwijderen">
-          <button>x</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="column" data-label="Afbeelding">2311</div>
-        <div class="column" data-label="Artikel">Lorem</div>
-        <div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
-        <div class="column" data-label="Prijs">22</div>
-        <div class="column" data-label="Subtotaal">Web designer</div>
-        <div class="column" data-label="Verwijderen">
-          <button>x</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="column" data-label="Afbeelding">2311</div>
-        <div class="column" data-label="Artikel">Lorem</div>
-        <div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
-        <div class="column" data-label="Prijs">22</div>
-        <div class="column" data-label="Subtotaal">Web designer</div>
-        <div class="column" data-label="Verwijderen">
-          <button>x</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="column" data-label="Afbeelding">2311</div>
-        <div class="column" data-label="Artikel">Lorem</div>
-        <div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
-        <div class="column" data-label="Prijs">22</div>
-        <div class="column" data-label="Subtotaal">Web designer</div>
-        <div class="column" data-label="Verwijderen">
-          <button>x</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="column hide" data-label=""></div>
-        <div class="column hide" data-label=""></div>
-        <div class="column hide" data-label=""></div>
-        <div class="column hide" data-label=""></div>
-        <div class="column" data-label="Subtotaal">10.00</div>
-        <div class="column hide" data-label=""></div>
-      </div>
-      <div class="row">
-        <div class="column hide" data-label="" style="padding-top: 30px;"></div>
-        <div class="column hide" data-label=""></div>
-        <div class="column hide" data-label=""></div>
-        <div class="column hide" data-label=""></div>
-        <div class="column hide" data-label=""></div>
-        <div class="column hide" data-label=""></div>
-      </div>
-      <div class="row">
-        <div class="column" data-label="" style="padding: 0px;">Verder winkelen</div>
-        <div class="column hide" data-label=""></div>
-        <div class="column hide" data-label=""></div>
-        <div class="column hide" data-label=""></div>
-        <div class="column hide" data-label=""></div>
-        <div class="column" data-label="">Afrekenen</div>
-      </div>
-    </div>
+	<footer> </footer>
 
-
-  </section>
-
-
-  <footer role="contentinfo">
-    <aside class="logos">
-      <figure class="block logo" role="complementary">
-        <img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
-        <figcaption>A descriptive caption for the image.</figcaption>
-      </figure>
-      <figure class="block logo" role="complementary">
-        <img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
-        <figcaption>A descriptive caption for the image.</figcaption>
-      </figure>
-      <figure class="block logo" role="complementary">
-        <img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
-        <figcaption>A descriptive caption for the image.</figcaption>
-      </figure>
-      <figure class="block logo" role="complementary">
-        <img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
-        <figcaption>A descriptive caption for the image.</figcaption>
-      </figure>
-    </aside>
-    <nav role="navigation">
-
-      <ul>
-        <li><h4>Informatie</h4></li>
-        <li><a href="/page/informatie/1K1WSACSJWDVC#fopshop">Over ons</a></li>
-        <li><a href="/page/informatie/1K1WSACSJWDVC#verzendkosten">Verzendkosten</a></li>
-        <li><a href="/page/informatie/1K1WSACSJWDVC#levering">Verzending</a></li>
-        <li><a href="/page/algemene-voorwaarden/VF6XRST4AP80">Algemene voorwaarden</a></li>
-      </ul>
-      <ul>
-        <li><h4>Categorieën</h4></li>
-        <li><a href="/cat/tiroler-kleding/tiroolse-heren/tirolerbroeken/1JEYSQT90D3CN">Tiroler broeken</a></li>
-        <li><a href="/cat/tiroler-kleding/tiroolse-dames/jurkjes/RLB5M7H958IP">Tiroler jurkjes</a></li>
-        <li><a href="/cat/hoeden/tirolerhoeden/1K253MI00UC0Z">Tirolerhoeden</a></li>
-        <li><a href="/cat/decoraties/wanddecoraties/1JECMK45T9E90">Apres ski decoraties</a></li>
-      </ul>
-      <ul>
-        <li><h4>Klantenservice</h4></li>
-        <li><a href="/">Contact</a></li>
-        <li>Wolter ten Catestraat 27</li>
-        <li>7551 HW Hengelo (o)</li>
-        <li>+31 (0) 74 259 47 14</li>
-      </ul>
-      <ul class="social">
-        <li><h4>Informatie</h4></li>
-        <li><a href="#">Google Plus</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">RSS Feed</a></li>
-      </ul>
-    </nav>
-  </footer> </main>
-
-  <footer> </footer>
-
-  <script src="js/prefixfree.min.js"></script>
-  <script src="js/tests.js"></script>
+	<script src="js/prefixfree.min.js"></script>
+	<script src="js/tests.js"></script>
 </body>
 </html>
