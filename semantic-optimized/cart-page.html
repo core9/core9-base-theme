@@ -11,279 +11,192 @@
 <link href="css/breakpoints/media-queries.css" rel="stylesheet" />
 <link href="css/menu.css" rel="stylesheet" />
 <link href="css/slider.css" rel="stylesheet" />
+<link href="css/table.css" rel="stylesheet" />
 <link href="css/skin.css" rel="stylesheet" />
-
-<style>
-/* seo friendly tables */
-.table {
-  display: table; /* Defines a Table */
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  border-bottom: 2px solid #dddddd;
-  color: #8d8d8d;
-  margin: 10px 0;
-  width: 100%;
-}
-
-.table-head {
-  display: table-header-group; /* Defines a table header group */
-}
-
-.table-head .column { /* Column inside the table-head */
-  background: #333333;
-  color: #7d7d7d;
-  border-right: 1px solid #5d5d5d;
-  border-bottom: none;
-}
-
-.table-head .column:hover { /* Column hover inside the table-head */
-  background: #222222;
-}
-
-.row {
-  display: table-row; /* Defines a table row */
-}
-
-.row .column:nth-child(1) { /* First column in a row */
-  border-left: 1px solid #eeeeee;
-}
-
-.row:last-child .column { /* column in a last row */
-  border-bottom: none;
-}
-
-.column {
-  display: table-cell; /* Defines a table cell */
-  padding: 10px 20px;
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-}
-
-.column:hover {
-  background: #f9f9f9;
-}
-/* Responsive table */
-@media all and (max-width: 640px) {
-  .table, .row, .column, .column:before {
-    display: block;
-    /* Converts a table, table row, table column and table column:before into a block element */
-  }
-  .table, .row .column:last-child {
-    border-bottom: none;
-  }
-  .table-head {
-    position: absolute; /* Hides table head but not using display none */
-    top: -1000em;
-    left: -1000em;
-  }
-  .row {
-    border: 1px solid #eeeeee;
-    border-top: 2px solid #dddddd;
-    border-bottom: 2px solid #dddddd;
-    margin: 20px 0;
-  }
-  .row .column:nth-child(1) { /* first column of the row */
-    border-left: none;
-  }
-  .row .column:last-child { /* last column of the row */
-    border-right: none;
-  }
-  .row:last-child .column, .column {
-    /* Column in the last row and column */
-    border-bottom: 1px solid #eeeeee;
-  }
-  .column:before {
-    /* prints the value of data-label attribute before the column data */
-    font-weight: bold;
-    padding-right: 20px;
-    font-size: 12px;
-    content: " " attr(data-label) " ";
-    /* call the attribute value of data-label and adds a string // */
-  }
-}
-
-input[type="text"] {
-  width: 30px;
-  margin-right: 25px;
-  margin-left: 25px;
-}
-</style>
-
-
 </head>
 <body>
 
-  <header role="banner">
-    <button onclick="location.reload();">Reload page</button>
-  </header>
+	<header role="banner">
+		<button onclick="location.reload();">Reload page</button>
+	</header>
 
-  <main role="main">
+	<main role="main">
 
-  <nav role="navigation">
-    <ul class="page-nav">
-      <li class="page-nav-left"><a class="inline" href="#">PRODUCTEN</a></li>
-      <li class="page-nav-middle"><a class="inline" href="#">HOME</a> <a class="inline" href="#">INFORMATIE</a> <a
-        class="inline" href="#"
-      >CONTACT</a></li>
-      <li class="page-nav-right"><a class="inline" href="#">WINKELWAGEN</a></li>
-    </ul>
-  </nav>
-  <nav class="block product-nav" role="navigation">
-    <form>
-      <label for="show-menu" class="show-menu">Show Menu</label> <input type="checkbox" id="show-menu">
-    </form>
-    <ul id="menu">
-      <li><a href="front-page.html">Home</a></li>
-      <li><a href="#">About</a>
-        <ul class="hidden">
-          <li><a href="#">Who We Are</a></li>
-          <li><a href="#">What We Do</a></li>
-        </ul></li>
-      <li><a href="category-page.html">Categories</a>
-        <ul class="hidden">
-          <li><a href="#">Photography</a></li>
-          <li><a href="#">Web &amp; User Interface Design</a></li>
-          <li><a href="#">Illustration</a></li>
-        </ul></li>
-      <li><a href="product-page.html">Product</a></li>
-      <li><a href="cart-page.html">Cart</a></li>
-      <li><a href="cart-page.html">Contact</a></li>
-    </ul>
+	<nav role="navigation">
+		<ul class="page-nav">
+			<li class="page-nav-left"><a class="inline" href="#">PRODUCTEN</a></li>
+			<li class="page-nav-middle"><a class="inline" href="#">HOME</a> <a class="inline" href="#">INFORMATIE</a> <a
+				class="inline" href="#"
+			>CONTACT</a></li>
+			<li class="page-nav-right"><a class="inline" href="#">WINKELWAGEN</a></li>
+		</ul>
+	</nav>
 
-  </nav>
+	<nav class="block product-nav" role="navigation">
 
-  <section class="content-area block product-page">
+		<form>
+			<label for="show-menu" class="show-menu">Show Menu</label> <input type="checkbox" id="show-menu">
+		</form>
+		<ul id="menu">
+			<li><a href="front-page.html">Home</a></li>
+			<li><a href="contact-page.html">Contact</a>
+				<ul class="hidden">
+					<li><a href="#">Who We Are</a></li>
+					<li><a href="#">What We Do</a></li>
+				</ul></li>
+			<li><a href="category-page.html">Categories</a>
+				<ul class="hidden">
+					<li><a href="#">Photography</a></li>
+					<li><a href="#">Web &amp; User Interface Design</a></li>
+					<li><a href="#">Illustration</a></li>
+				</ul></li>
+			<li><a href="product-page.html">Product</a></li>
+			<li><a href="cart-page.html">Cart</a></li>
+			<li><a href="checkout-page.html">Contact</a></li>
+		</ul>
 
+	</nav>
 
-
-
-        <p>when the browser is resized to 640 px the table will respond and change its layout</p>
-    <div class="table">
-        <div class="table-head">
-            <div class="column" data-label="Afbeelding">Afbeelding</div>
-            <div class="column" data-label="Afbeelding">Artikel</div>
-            <div class="column" data-label="Hoeveelheid">Hoeveelheid</div>
-            <div class="column" data-label="Prijs">Prijs</div>
-            <div class="column" data-label="Subtotaal">Subtotaal</div>
-            <div class="column" data-label="Verwijderen">Verwijderen</div>
-        </div>
-        <div class="row">
-            <div class="column" data-label="Afbeelding">2311</div>
-            <div class="column" data-label="Artikel">Lorem</div>
-            <div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
-            <div class="column" data-label="Prijs">22</div>
-            <div class="column" data-label="Subtotaal">Web designer</div>
-            <div class="column" data-label="Verwijderen"><button>x</button></div>
-       </div>
-        <div class="row">
-            <div class="column" data-label="Afbeelding">2311</div>
-            <div class="column" data-label="Artikel">Lorem</div>
-            <div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
-            <div class="column" data-label="Prijs">22</div>
-            <div class="column" data-label="Subtotaal">Web designer</div>
-            <div class="column" data-label="Verwijderen"><button>x</button></div>
-       </div>
-        <div class="row">
-            <div class="column" data-label="Afbeelding">2311</div>
-            <div class="column" data-label="Artikel">Lorem</div>
-            <div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
-            <div class="column" data-label="Prijs">22</div>
-            <div class="column" data-label="Subtotaal">Web designer</div>
-            <div class="column" data-label="Verwijderen"><button>x</button></div>
-       </div>
-        <div class="row">
-            <div class="column" data-label="Afbeelding">2311</div>
-            <div class="column" data-label="Artikel">Lorem</div>
-            <div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
-            <div class="column" data-label="Prijs">22</div>
-            <div class="column" data-label="Subtotaal">Web designer</div>
-            <div class="column" data-label="Verwijderen"><button>x</button></div>
-       </div>
-        <div class="row">
-            <div class="column hide" data-label=""></div>
-            <div class="column hide" data-label=""></div>
-            <div class="column hide" data-label=""></div>
-            <div class="column hide" data-label=""></div>
-            <div class="column" data-label="Subtotaal">10.00</div>
-            <div class="column hide" data-label=""></div>
-       </div>
-        <div class="row">
-            <div class="column hide" data-label="" style="padding-top:30px;"></div>
-            <div class="column hide" data-label=""></div>
-            <div class="column hide" data-label=""></div>
-            <div class="column hide" data-label=""></div>
-            <div class="column hide" data-label=""></div>
-            <div class="column hide" data-label=""></div>
-        </div>
-        <div class="row">
-            <div class="column" data-label="" style="padding:0px;">Verder winkelen</div>
-            <div class="column hide" data-label=""></div>
-            <div class="column hide" data-label=""></div>
-            <div class="column hide" data-label=""></div>
-            <div class="column hide" data-label=""></div>
-            <div class="column" data-label="">Afrekenen</div>
-        </div>
-    </div>
+	<section class="content-area block product-page">
 
 
-  </section>
 
 
-  <footer role="contentinfo">
-    <aside class="logos">
-      <figure class="block logo" role="complementary">
-        <img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
-        <figcaption>A descriptive caption for the image.</figcaption>
-      </figure>
-      <figure class="block logo" role="complementary">
-        <img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
-        <figcaption>A descriptive caption for the image.</figcaption>
-      </figure>
-      <figure class="block logo" role="complementary">
-        <img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
-        <figcaption>A descriptive caption for the image.</figcaption>
-      </figure>
-      <figure class="block logo" role="complementary">
-        <img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
-        <figcaption>A descriptive caption for the image.</figcaption>
-      </figure>
-    </aside>
-    <nav role="navigation">
+		<p>when the browser is resized to 640 px the table will respond and change its layout</p>
+		<div class="table">
+			<div class="table-head">
+				<div class="column" data-label="Afbeelding">Afbeelding</div>
+				<div class="column" data-label="Afbeelding">Artikel</div>
+				<div class="column" data-label="Hoeveelheid">Hoeveelheid</div>
+				<div class="column" data-label="Prijs">Prijs</div>
+				<div class="column" data-label="Subtotaal">Subtotaal</div>
+				<div class="column" data-label="Verwijderen">Verwijderen</div>
+			</div>
+			<div class="row">
+				<div class="column" data-label="Afbeelding">2311</div>
+				<div class="column" data-label="Artikel">Lorem</div>
+				<div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
+				<div class="column" data-label="Prijs">22</div>
+				<div class="column" data-label="Subtotaal">Web designer</div>
+				<div class="column" data-label="Verwijderen">
+					<button>x</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column" data-label="Afbeelding">2311</div>
+				<div class="column" data-label="Artikel">Lorem</div>
+				<div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
+				<div class="column" data-label="Prijs">22</div>
+				<div class="column" data-label="Subtotaal">Web designer</div>
+				<div class="column" data-label="Verwijderen">
+					<button>x</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column" data-label="Afbeelding">2311</div>
+				<div class="column" data-label="Artikel">Lorem</div>
+				<div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
+				<div class="column" data-label="Prijs">22</div>
+				<div class="column" data-label="Subtotaal">Web designer</div>
+				<div class="column" data-label="Verwijderen">
+					<button>x</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column" data-label="Afbeelding">2311</div>
+				<div class="column" data-label="Artikel">Lorem</div>
+				<div class="column" data-label="Hoeveelheid">Ipsum dolor</div>
+				<div class="column" data-label="Prijs">22</div>
+				<div class="column" data-label="Subtotaal">Web designer</div>
+				<div class="column" data-label="Verwijderen">
+					<button>x</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column hide" data-label=""></div>
+				<div class="column hide" data-label=""></div>
+				<div class="column hide" data-label=""></div>
+				<div class="column hide" data-label=""></div>
+				<div class="column" data-label="Subtotaal">10.00</div>
+				<div class="column hide" data-label=""></div>
+			</div>
+			<div class="row">
+				<div class="column hide" data-label="" style="padding-top: 30px;"></div>
+				<div class="column hide" data-label=""></div>
+				<div class="column hide" data-label=""></div>
+				<div class="column hide" data-label=""></div>
+				<div class="column hide" data-label=""></div>
+				<div class="column hide" data-label=""></div>
+			</div>
+			<div class="row">
+				<div class="column" data-label="" style="padding: 0px;">Verder winkelen</div>
+				<div class="column hide" data-label=""></div>
+				<div class="column hide" data-label=""></div>
+				<div class="column hide" data-label=""></div>
+				<div class="column hide" data-label=""></div>
+				<div class="column" data-label="">Afrekenen</div>
+			</div>
+		</div>
 
-      <ul>
-        <li><h4>Informatie</h4></li>
-        <li><a href="/page/informatie/1K1WSACSJWDVC#fopshop">Over ons</a></li>
-        <li><a href="/page/informatie/1K1WSACSJWDVC#verzendkosten">Verzendkosten</a></li>
-        <li><a href="/page/informatie/1K1WSACSJWDVC#levering">Verzending</a></li>
-        <li><a href="/page/algemene-voorwaarden/VF6XRST4AP80">Algemene voorwaarden</a></li>
-      </ul>
-      <ul>
-        <li><h4>Categorieën</h4></li>
-        <li><a href="/cat/tiroler-kleding/tiroolse-heren/tirolerbroeken/1JEYSQT90D3CN">Tiroler broeken</a></li>
-        <li><a href="/cat/tiroler-kleding/tiroolse-dames/jurkjes/RLB5M7H958IP">Tiroler jurkjes</a></li>
-        <li><a href="/cat/hoeden/tirolerhoeden/1K253MI00UC0Z">Tirolerhoeden</a></li>
-        <li><a href="/cat/decoraties/wanddecoraties/1JECMK45T9E90">Apres ski decoraties</a></li>
-      </ul>
-      <ul>
-        <li><h4>Klantenservice</h4></li>
-        <li><a href="/">Contact</a></li>
-        <li>Wolter ten Catestraat 27</li>
-        <li>7551 HW Hengelo (o)</li>
-        <li>+31 (0) 74 259 47 14</li>
-      </ul>
-      <ul class="social">
-        <li><h4>Informatie</h4></li>
-        <li><a href="#">Google Plus</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">RSS Feed</a></li>
-      </ul>
-    </nav>
-  </footer> </main>
 
-  <footer> </footer>
+	</section>
 
-  <script src="js/prefixfree.min.js"></script>
-  <script src="js/tests.js"></script>
+
+	<footer role="contentinfo">
+		<aside class="logos">
+			<figure class="block logo" role="complementary">
+				<img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
+				<figcaption>A descriptive caption for the image.</figcaption>
+			</figure>
+			<figure class="block logo" role="complementary">
+				<img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
+				<figcaption>A descriptive caption for the image.</figcaption>
+			</figure>
+			<figure class="block logo" role="complementary">
+				<img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
+				<figcaption>A descriptive caption for the image.</figcaption>
+			</figure>
+			<figure class="block logo" role="complementary">
+				<img src="http://placehold.it/400x300" alt="A descriptive text of the image" />
+				<figcaption>A descriptive caption for the image.</figcaption>
+			</figure>
+		</aside>
+		<nav role="navigation">
+
+			<ul>
+				<li><h4>Informatie</h4></li>
+				<li><a href="/page/informatie/1K1WSACSJWDVC#fopshop">Over ons</a></li>
+				<li><a href="/page/informatie/1K1WSACSJWDVC#verzendkosten">Verzendkosten</a></li>
+				<li><a href="/page/informatie/1K1WSACSJWDVC#levering">Verzending</a></li>
+				<li><a href="/page/algemene-voorwaarden/VF6XRST4AP80">Algemene voorwaarden</a></li>
+			</ul>
+			<ul>
+				<li><h4>Categorieën</h4></li>
+				<li><a href="/cat/tiroler-kleding/tiroolse-heren/tirolerbroeken/1JEYSQT90D3CN">Tiroler broeken</a></li>
+				<li><a href="/cat/tiroler-kleding/tiroolse-dames/jurkjes/RLB5M7H958IP">Tiroler jurkjes</a></li>
+				<li><a href="/cat/hoeden/tirolerhoeden/1K253MI00UC0Z">Tirolerhoeden</a></li>
+				<li><a href="/cat/decoraties/wanddecoraties/1JECMK45T9E90">Apres ski decoraties</a></li>
+			</ul>
+			<ul>
+				<li><h4>Klantenservice</h4></li>
+				<li><a href="/">Contact</a></li>
+				<li>Wolter ten Catestraat 27</li>
+				<li>7551 HW Hengelo (o)</li>
+				<li>+31 (0) 74 259 47 14</li>
+			</ul>
+			<ul class="social">
+				<li><h4>Informatie</h4></li>
+				<li><a href="#">Google Plus</a></li>
+				<li><a href="#">Facebook</a></li>
+				<li><a href="#">Twitter</a></li>
+				<li><a href="#">RSS Feed</a></li>
+			</ul>
+		</nav>
+	</footer> </main>
+
+	<footer> </footer>
+
+	<script src="js/prefixfree.min.js"></script>
+	<script src="js/tests.js"></script>
 </body>
 </html>
