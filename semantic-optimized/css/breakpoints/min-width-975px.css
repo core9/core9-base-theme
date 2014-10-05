@@ -9,11 +9,19 @@
 	.slider {
 		margin-left: 1.5em;
 	}
-  .popular {
-    max-width: 26em;
-  }
-  .article {
-    margin-left: 1.5em;
-    max-width: 67em;
-  }
+	.products {
+		margin-left: 1.5em;
+		max-width: 67em;
+	}
+	.product {
+		margin-left: 1.5em;
+		max-width: 31.3em;
+	}
+	.popular {
+		max-width: 26em;
+	}
+	.article {
+		margin-left: 1.5em;
+		max-width: 67em;
+	}
 }

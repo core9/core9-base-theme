@@ -9,9 +9,10 @@ main {
 	max-width: 114em;
 }
 
+
 .product-nav {
 	max-width: 26em;
-	display:block;
+	display: block;
 }
 
 .slider {
@@ -23,15 +24,21 @@ main {
 	max-width: 57em;
 }
 
-.product {
-	margin-top: 1.5em;
+.products {
 	margin-left: 1.5em;
+	max-width: 86.5em;
+}
+
+.product {
+	 margin-top:1.5em;
+	 margin-left:1.5em;
+	 max-width:26.75em;
 }
 
 .discount {
 	width: 18em;
 	height: 30em;
-	display:block;
+	display: block;
 }
 
 .popular {
