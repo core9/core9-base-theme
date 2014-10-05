@@ -1,0 +1,16 @@
+.form-vertical > fieldset > label {
+  display: block;
+  width: 100%;
+  height: 31px;
+}
+
+.form-vertical > fieldset > label > input {
+  left: 322px;
+  position: absolute;
+  margin-top: 2px;
+  width: 200px;
+}
+
+
+
+
