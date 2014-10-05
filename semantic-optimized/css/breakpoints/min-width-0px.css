@@ -29,13 +29,14 @@
   width: 18em;
 }
 
-#product-nav {
+.product-nav {
   margin-top: 0px;
+  max-width:26em;
   min-height: 30em;
 }
 
-#slider {
-  display: none;
+.slider {
+	max-width: 67em;
 }
 
 .banner {
@@ -76,4 +77,16 @@ footer>nav>ul {
   max-width: 150px;
   max-height: 75px;
   margin-left: 10em;
+}
+
+@media only screen and (min-width : 975px) {
+
+  main {
+    max-width:945px;
+  }
+
+  .slider{
+    margin-left:1.5em;
+  }
+
 }

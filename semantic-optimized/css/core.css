@@ -13,12 +13,12 @@ body {
 header {
 	height: 150px;
 	text-align: center;
-	display: none;
 }
 
 main {
 	position: relative;
 	margin: 0 auto;
+	margin-top: -60px;
 	overflow: hidden;
 	padding: 15px;
 }
