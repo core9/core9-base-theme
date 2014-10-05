@@ -1,92 +1,112 @@
 .content-area {
-  margin-top: 1.5em;
-  margin-left: 1.5em;
-  margin-bottom: 1.5em;
-  min-height: 700px;
-  width: 100%;
+	margin-top: 1.5em;
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+	min-height: 700px;
+	width: 100%;
 }
 
 .inline {
-  display: inline;
+	display: inline;
 }
 
 .page-nav {
-  height: 50px;
+	height: 50px;
 }
 
 .page-nav-left {
-  display: inline;
-  width: 26em;
+	display: inline;
+	width: 26em;
 }
 
 .page-nav-middle {
-  display: inline;
-  width: 69.7em;
+	display: inline;
+	width: 69.7em;
 }
 
 .page-nav-right {
-  display: inline;
-  width: 18em;
+	display: inline;
+	width: 18em;
 }
 
 .product-nav {
-  margin-top: 0px;
-  max-width:26em;
-  min-height: 30em;
+	margin-top: 0px;
+	max-width: 100%;
+	min-height: 31.5em;
+	display:none;
 }
 
 .slider {
-	max-width: 67em;
+	 max-width:67em;
+	max-height: 30em;
 }
 
 .banner {
-  height: 100px;
+	height: 10em;
 }
 
+.discount {
+  display:none;
+	}
+
 .popular {
-  margin-left: 0px;
-  margin-top: 1.5em;
-  max-width: 33em;
-  height: 300px;
+	margin-left: 0px;
+	margin-top: 1.5em;
+	max-width: 33em;
+  max-height: 30em;
 }
 
 .product {
-  margin-top: 1.5em;
-  max-width: 33em;
-  height: 300px;
+	margin-top: 1.5em;
+	max-width: 33em;
+	max-height: 30em;
 }
 
 .product-image {
-  max-width: 13em;
+	max-width: 13em;
 }
 
 footer>nav>ul {
-  float: left;
-  max-width: 25em;
-  margin-left: 9em;
+	float: left;
+	max-width: 25em;
+	margin-left: 9em;
 }
 
 .logos {
-  width: 100%;
-  background-color: #fff;
-  height: 80px;
-  overflow: hidden;
+	width: 100%;
+	background-color: #fff;
+	height: 8em;
+	overflow: hidden;
 }
 
 .logo {
-  max-width: 150px;
-  max-height: 75px;
-  margin-left: 10em;
+	max-width: 15em;
+	max-height: 7.5em;
+	margin-left: 10em;
+}
+
+@media only screen and (min-width : 670px) {
+  main {
+    max-width: 67em;
+  }
+
+	.slider {
+    max-width:67em;
+  }
 }
 
 @media only screen and (min-width : 975px) {
-
-  main {
-    max-width:945px;
+	main {
+		max-width: 94.5em;
+	}
+	 .product-nav {
+  max-width: 26em;
+  display:block;
   }
+	.slider {
+		margin-left: 1.5em;
+	}
 
-  .slider{
-    margin-left:1.5em;
-  }
+
 
 }

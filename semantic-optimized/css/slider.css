@@ -1,11 +1,11 @@
 .css-slideshow {
   position: relative;
-  height: 370px;
-}
+  height: 30em;
+  }
 
 .css-slideshow figure {
   margin: 0;
-  height: 370px;
+  height: 30em;
   background: #000;
   position: absolute;
 }
