@@ -9,12 +9,18 @@ main {
 	max-width: 114em;
 }
 
-
 .product-nav {
 	max-width: 26em;
 	display: block;
 }
 
+.product {
+	margin-top: 1.5em;
+	margin-left: 1.5em;
+	max-width: 26.75em;
+}
+
+/** front page **/
 .slider {
 	margin-left: 1.5em;
 	max-width: 67em;
@@ -27,12 +33,6 @@ main {
 .products {
 	margin-left: 1.5em;
 	max-width: 86.5em;
-}
-
-.product {
-	 margin-top:1.5em;
-	 margin-left:1.5em;
-	 max-width:26.75em;
 }
 
 .discount {
@@ -49,4 +49,27 @@ main {
 .article {
 	max-width: 86.5em;
 	margin-left: 1.5em;
+}
+
+.product-page {
+	margin-left: 1.5em;
+	max-width: 86.5em;
+	min-height: 65em;
+}
+
+.product-image-box {
+	max-width: 26em;
+}
+
+.product-description {
+	font-size: 2em;
+	max-width: 30em;
+}
+
+.product-price {
+	max-width: 42em;
+}
+
+.product-cart-button {
+	max-width: 30em;
 }
