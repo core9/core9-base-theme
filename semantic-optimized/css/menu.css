@@ -79,17 +79,29 @@ ul#menu  li a:hover+.hidden, .hidden:hover {
 	background: #19c589;
 	text-align: center;
 	padding: 10px 0;
-	display: none;
+	_display: none;
+}
+
+#menu-form {
+  display:block;
+  width:3em;
+  height:2em;
+  float: right;
+margin-top: -36px;
+
 }
 
 /*Hide checkbox*/
 input[type=checkbox] {
-	display: none;
+	_display: none;
+display: block;
+
 }
 
 /*Show menu when invisible checkbox is checked*/
 input[type=checkbox]:checked ~ #menu {
-	display: block;
+	_display: block;
+	 display: none;
 }
 
 /*Responsive Styles*/
