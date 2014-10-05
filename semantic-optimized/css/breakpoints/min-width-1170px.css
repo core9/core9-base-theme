@@ -52,7 +52,7 @@ main {
 	margin-left: 1.5em;
 }
 
-.product-page {
+.product-page, .contact-page, .checkout-page {
 	margin-left: 1.5em;
 	max-width: 86.5em;
 	min-height: 65em;
