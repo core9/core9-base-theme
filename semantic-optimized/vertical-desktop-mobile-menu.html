@@ -11,11 +11,12 @@ ul#menu {
 	margin: 0;
 	padding: 0;
 	_position: absolute; /** <- makes it horizontal **/
-	width:304px;
+	width: 304px;
 }
 
 /*Create a horizontal list with spacing*/
 ul#menu li.menu-item {
+
 	display: block;
 	_float: left; /** <- makes it horizontal **/
 	margin-right: 1px;
@@ -40,7 +41,7 @@ li.menu-item:hover a.menu-link {
 }
 
 /*Style for dropdown links*/
-li.menu-item:hover ul a.menu-link {
+li.menu-item:hover ul.hidden a.menu-link {
 	background: #f3f3f3;
 	color: #2f3036;
 	height: 40px;
@@ -48,31 +49,31 @@ li.menu-item:hover ul a.menu-link {
 }
 
 /*Hover state for dropdown links*/
-li.menu-item:hover ul a.menu-link:hover {
+li.menu-item:hover ul.hidden a.menu-link:hover {
 	background: #19c589;
 	color: #fff;
 }
 
 /*Hide dropdown links until they are needed*/
-li.menu-item ul {
+li.menu-item ul.hidden {
 	display: none;
 }
 
 /*Make dropdown links vertical*/
-li.menu-item ul li.menu-item {
+li.menu-item ul.hidden li.menu-item {
 	display: block;
 	float: none;
 }
 
 /*Prevent text wrapping*/
-li.menu-item ul li.menu-item a.menu-link {
+li.menu-item ul.hidden li.menu-item a.menu-link {
 	width: auto;
 	min-width: 100px;
 	padding: 0 20px;
 }
 
 /*Display the dropdown on hover*/
-ul li.menu-item a.menu-link:hover+.hidden, .hidden:hover {
+ul#menu li.menu-item a.menu-link:hover+.hidden, .hidden:hover {
 	display: block;
 }
 
@@ -122,7 +123,7 @@ input#show-menu[type=checkbox]:checked ~ #menu {
 </head>
 <body>
 	<label for="show-menu" class="show-menu">Show Menu</label>
-	<input type="checkbox" id="show-menu" >
+	<input type="checkbox" id="show-menu">
 	<ul id="menu">
 		<li class="menu-item"><a class="menu-link" href="#">Home</a></li>
 		<li class="menu-item"><a class="menu-link" href="#">About </a>
