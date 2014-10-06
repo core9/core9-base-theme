@@ -1,5 +1,5 @@
 var Wizard = {
-		json : {},
+	json : {},
 	getStep : function(step, label) {
 		var li = document.createElement("li");
 		var a = document.createElement("a");
@@ -34,11 +34,6 @@ var Wizard = {
 		}
 		Wizard.hideAllDivs();
 		Wizard.showChooseDiv();
-
-		//FIXME!!
-		//Wizard.setUpChooseOptions(Wizard.json);
-		//Wizard.activateChooseButtons(Wizard.json);
-		//
 	},
 
 	showChooseDiv : function() {
@@ -55,36 +50,25 @@ var Wizard = {
 		}
 	},
 
-	cleanUpOldWidget : function(){
-		var ul = document.getElementById('tab-ul');
-		ul.innerHTML = '';
-	},
-
 	endsWith : function(str, suffix) {
-	    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+		return str.indexOf(suffix, str.length - suffix.length) !== -1;
 	},
 
 	activateWidget : function(widget, widgets) {
-
 		console.log('activating : ' + widget);
 		var stepFile = widgets[widget].steps;
-		if(!Wizard.endsWith(stepFile, ".json")){
+		if (!Wizard.endsWith(stepFile, ".json")) {
 			console.log("Oops wrong file : " + stepFile);
 			return;
 		}
 
-		Wizard.cleanUpOldWidget();
-		Wizard.activateChoosePanel();
-
-
-		promise.get(stepFile).then(
-				function(error, text, xhr) {
-					if (error) {
-						alert('Error ' + xhr.status);
-						return;
-					}
-					Wizard.createWizard(JSON.parse(text))
-				});
+		promise.get(stepFile).then(function(error, text, xhr) {
+			if (error) {
+				alert('Error ' + xhr.status);
+				return;
+			}
+			Wizard.createWizard(JSON.parse(text))
+		});
 
 		document.getElementById('tab-ul')
 				.addEventListener(
@@ -103,31 +87,16 @@ var Wizard = {
 
 	},
 
-	activateChooseButtons : function(json){
-
-		var datalist = document.getElementById("data-list");
+	activateChooseButtons : function(json) {
 		var button = document.getElementById("choose-button");
-
 		button.addEventListener("click", function(event) {
-			console.log(datalist.value);
-			Wizard.activateWidget(datalist.value, json);
+			Wizard.activateWidget(document.getElementById("data-list").value,
+					json);
 		}, false);
-
-
-		var resetButton = document.getElementById("choose-reset-button");
-
-		resetButton.addEventListener("click", function(event) {
-			console.log('resetting');
-			Wizard.cleanUpOldWidget();
-			Wizard.activateChoosePanel();
-			Wizard.setUpChooseOptions(Wizard.json);
-			Wizard.activateChooseButtons(Wizard.json);
-		}, false);
-
 
 	},
 
-	setUpChooseOptions : function(json){
+	setUpChooseOptions : function(json) {
 		var options = '';
 		for ( var key in json) {
 			if (json.hasOwnProperty(key)) {
@@ -137,19 +106,7 @@ var Wizard = {
 		document.getElementById('widgets').innerHTML = options;
 	},
 
-	activateChoosePanel : function(){
-		var t = document.querySelector('#widget-chooser');
-
-		var clone = document.importNode(t.content, true);
-		var c = document.querySelector('#tab-ul');
-		c.appendChild(clone);
-	},
-
 	init : function(config) {
-
-		Wizard.activateChoosePanel();
-
-		console.log(config.widgets);
 		promise.get(config.widgets).then(function(error, text, xhr) {
 			if (error) {
 				return;
@@ -159,9 +116,6 @@ var Wizard = {
 			Wizard.setUpChooseOptions(json);
 			Wizard.activateChooseButtons(json);
 		});
-
-
-
 	}
 
 }
