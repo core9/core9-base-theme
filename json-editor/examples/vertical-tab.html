@@ -11,14 +11,17 @@
 <body>
 
 	<div id="tab-container">
+	  <template id="widget-chooser">
+	       <li><a href="#">Choose</a>
+        <div id="choose-div" class="main-container form-container">
+          <input type="text" id="data-list" list="widgets">
+          <datalist id="widgets">
+          </datalist>
+          <button id="choose-button">select</button>
+          <button id="choose-reset-button">reset</button>
+        </div></li>
+	  </template>
 		<ul id="tab-ul">
-			<li><a href="#">Choose</a>
-				<div id="choose-div" class="main-container form-container">
-					<input type="text" id="data-list" list="widgets">
-					<datalist id="widgets">
-					</datalist>
-					<button id="choose-button">select</button>
-				</div></li>
 		</ul>
 	</div>
 
