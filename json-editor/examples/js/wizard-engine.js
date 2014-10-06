@@ -35,7 +35,7 @@ var Wizard = {
 		Wizard.hideAllDivs();
 		Wizard.showChooseDiv();
 
-		//
+		//FIXME!!
 		Wizard.setUpChooseOptions(Wizard.json);
 		Wizard.activateChooseButtons(Wizard.json);
 		//
