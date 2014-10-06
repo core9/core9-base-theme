@@ -32,6 +32,12 @@ var Wizard = {
 			ul.appendChild(Wizard.getStep(step, steps[step].label));
 			Wizard.getScript(script, step);
 		}
+		Wizard.hideAllDivs();
+		Wizard.showChooseDiv();
+	},
+
+	showChooseDiv : function(){
+		document.getElementById('choose-div').style.display = "block";
 	},
 
 	hideAllDivs : function() {

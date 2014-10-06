@@ -12,8 +12,28 @@
 
 	<div id="tab-container">
 		<ul id="tab-ul">
+			<li><a href="#">Choose</a>
+				<div id="choose-div" class="main-container form-container">
+					<input type="text" id="data-list" list="widgets">
+					<datalist id="widgets">
+						<option value="basic">
+						<option value="video">
+						<option value="image">
+					</datalist>
+					<button id="choose-button">select</button>
+				</div></li>
 		</ul>
 	</div>
+
+	<script>
+		var datalist = document.getElementById("data-list");
+		var button = document.getElementById("choose-button");
+
+		button.addEventListener("click", function(event) {
+			console.log(datalist.value);
+		}, false);
+	</script>
+
 
 	<script src="js/wizard-engine.js"></script>
 	<script>
