@@ -133,6 +133,11 @@
 		
 		
 		document.getElementById('tab-ul').addEventListener("click",function(e) {
+				
+				if(e.target.tagName != 'A'){
+					return;
+				}
+			
 				hideAllDivs();
 				var elem = e.target.parentNode.getElementsByTagName('div')[0];
 				console.log(elem);

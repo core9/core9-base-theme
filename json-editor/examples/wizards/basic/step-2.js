@@ -47,7 +47,8 @@ promise.get('wizards/basic/basic.json').then(
 					
 					
 				      // Hook up the submit button to log to the console
-				      document.getElementById('submit-2').addEventListener('click',function() {
+				      document.getElementById('submit-2').addEventListener('click',function(e) {
+				    	  e.stopPropagation();
 				        // Get the value from the editor
 				        console.log(editor.getValue());
 				      });
