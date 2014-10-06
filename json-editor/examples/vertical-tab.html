@@ -7,7 +7,7 @@
 #content {
 	background-color: #f2f2f2;
 	padding: 20px 10px;
-	overflow: auto;
+	_overflow: auto;
 }
 
 #tab-container {
@@ -84,39 +84,35 @@
 
 
 	<script>
-	
-	function getStep(step, label){
-		var li = document.createElement("li");
-		var a = document.createElement("a");
-		a.setAttribute("href","#");
-		a.appendChild(document.createTextNode(label));
-		li.appendChild(a);
-		var div = document.createElement("div");
-		div.setAttribute("class","main-container form-container");
-		var innerDiv = document.createElement("div");
-		innerDiv.setAttribute("id","editor_holder-" + step);
-		div.appendChild(innerDiv);
-		var button = document.createElement("button");
-		button.setAttribute("id","submit-" + step);
-		button.appendChild(document.createTextNode("Submit"));
-		div.appendChild(button);
-		li.appendChild(div);
-		return li;
-	}
-	
-	
-		function getScript(script, step){
+		function getStep(step, label) {
+			var li = document.createElement("li");
+			var a = document.createElement("a");
+			a.setAttribute("href", "#");
+			a.appendChild(document.createTextNode(label));
+			li.appendChild(a);
+			var div = document.createElement("div");
+			div.setAttribute("class", "main-container form-container");
+			var innerDiv = document.createElement("div");
+			innerDiv.setAttribute("id", "editor_holder-" + step);
+			div.appendChild(innerDiv);
+			var button = document.createElement("button");
+			button.setAttribute("id", "submit-" + step);
+			button.appendChild(document.createTextNode("Submit"));
+			div.appendChild(button);
+			li.appendChild(div);
+			return li;
+		}
+
+		function getScript(script, step) {
 			$LAB.script(script).wait(function() {
 				init(step);
 			});
 		}
-	
+
 		function createWizard(steps) {
 			var ul = document.getElementById('tab-ul');
 			for ( var step in steps) {
 				var script = steps[step].file;
-				console.log(script);
-				
 				ul.appendChild(getStep(step, steps[step].label));
 				getScript(script, step);
 			}
@@ -130,51 +126,32 @@
 					}
 					createWizard(JSON.parse(text))
 				});
-		
-			
-		function showStepForm(e){
-			console.log(e);
-		}
-		
-		function hideAllDivs(){
+
+		function hideAllDivs() {
 			var divs = document.getElementsByClassName('main-container');
-			for(var div in divs){
+			for ( var div in divs) {
 				var elem = divs[div];
-				if(elem.tagName == 'DIV'){
+				if (elem.tagName == 'DIV') {
 					elem.style.display = "none";
 				}
 			}
 		}
-		
-		
-		document.getElementById('tab-ul').addEventListener("click",function(e) {
-				
-				if(e.target.tagName != 'A'){
-					return;
-				}
-			
-				hideAllDivs();
-				var elem = e.target.parentNode.getElementsByTagName('div')[0];
-				console.log(elem);
-				if(elem !== undefined && elem.tagName == 'DIV'){
-						elem.style.display = "block";
-					
-				}
-		    });
-		
+
+		document.getElementById('tab-ul')
+				.addEventListener(
+						"click",
+						function(e) {
+							if (e.target.tagName != 'A') {
+								return;
+							}
+							hideAllDivs();
+							var elem = e.target.parentNode
+									.getElementsByTagName('div')[0];
+							if (elem !== undefined && elem.tagName == 'DIV') {
+								elem.style.display = "block";
+							}
+						});
 	</script>
 
-<!-- 				<li><a href="#">Step 1</a>
-					<div class="main-container form-container">
-						<div id='editor_holder-1'></div>
-						<button id='submit-1'>Submit (console.log)</button>
-					</div></li>
-				<li><a href="#">Html</a>
-				<div class="main-container form-container">
-						<div id='editor_holder-2'></div>
-						<button id='submit-2'>Submit (console.log)</button>
-					</div></li>
-				<li><a href="#">CSS</a></li>
-				<li><a href="#">JavaScript</a></li> -->
 </body>
 </html>
