@@ -14,7 +14,7 @@ ul#menu {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	_position: absolute; /** <- makes it horizontal **/
+	position: relative; /** <- makes it horizontal **/
 	width: 304px;
 }
 
@@ -71,6 +71,7 @@ li.menu-item:hover ul.hidden a.menu-link:hover {
 /*Hide dropdown links until they are needed*/
 li.menu-item ul.hidden {
 	display: none;
+	height: 100%;
 }
 
 /*Make dropdown links vertical*/
@@ -87,7 +88,7 @@ li.menu-item ul.hidden li.menu-item a.menu-link {
 }
 
 /*Display the dropdown on hover*/
-ul#menu li.menu-item a.menu-link:hover+.hidden, .hidden:hover {
+ul#menu li.menu-item:hover .hidden, .hidden:hover {
 	display: block;
 }
 
