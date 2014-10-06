@@ -46,7 +46,7 @@ var Wizard = {
 
 	init : function() {
 
-		promise.get(Wizard.config.).then(
+		promise.get('wizards/basic/steps.json').then(
 				function(error, text, xhr) {
 					if (error) {
 						alert('Error ' + xhr.status);
