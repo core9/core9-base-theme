@@ -56,15 +56,8 @@ var Wizard = {
 	},
 
 	cleanUpOldWidget : function(){
-		var root = document.getElementById('tab-ul');
-		var lis = root.getElementsByTagName("li");
-
-		for(var i = 0, il = lis.length;i<il;i++) {
-			try{
-				root.removeChild(lis[i]);
-			}catch(e){}
-
-		}
+		var ul = document.getElementById('tab-ul');
+		ul.innerHTML = '';
 	},
 
 	endsWith : function(str, suffix) {
@@ -127,6 +120,8 @@ var Wizard = {
 			console.log('resetting');
 			Wizard.cleanUpOldWidget();
 			Wizard.activateChoosePanel();
+			Wizard.setUpChooseOptions(Wizard.json);
+			Wizard.activateChooseButtons(Wizard.json);
 		}, false);
 
 
