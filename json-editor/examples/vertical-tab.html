@@ -76,18 +76,6 @@
 	<div id="content">
 		<div id="tab-container">
 			<ul id="tab-ul">
-				<li><a href="#">Step 1</a>
-					<div class="main-container form-container">
-						<div id='editor_holder-1'></div>
-						<button id='submit-1'>Submit (console.log)</button>
-					</div></li>
-				<li><a href="#">Html</a>
-				<div class="main-container form-container">
-						<div id='editor_holder-2'></div>
-						<button id='submit-2'>Submit (console.log)</button>
-					</div></li>
-				<li><a href="#">CSS</a></li>
-				<li><a href="#">JavaScript</a></li>
 			</ul>
 		</div>
 	</div>
@@ -97,10 +85,11 @@
 
 	<script>
 	
-	function getStep(step){
+	function getStep(step, label){
 		var li = document.createElement("li");
 		var a = document.createElement("a");
 		a.setAttribute("href","#");
+		a.appendChild(document.createTextNode(label));
 		li.appendChild(a);
 		var div = document.createElement("div");
 		div.setAttribute("class","main-container form-container");
@@ -116,20 +105,20 @@
 	}
 	
 	
+		function getScript(script, step){
+			$LAB.script(script).wait(function() {
+				init(step);
+			});
+		}
+	
 		function createWizard(steps) {
 			var ul = document.getElementById('tab-ul');
 			for ( var step in steps) {
 				var script = steps[step].file;
 				console.log(script);
 				
-				ul.appendChild(getStep(step));
-				
-				$LAB.script(script).wait(function() {
-					init();
-				});
-
-				
-				
+				ul.appendChild(getStep(step, steps[step].label));
+				getScript(script, step);
 			}
 		}
 
@@ -175,7 +164,17 @@
 		
 	</script>
 
-
-
+<!-- 				<li><a href="#">Step 1</a>
+					<div class="main-container form-container">
+						<div id='editor_holder-1'></div>
+						<button id='submit-1'>Submit (console.log)</button>
+					</div></li>
+				<li><a href="#">Html</a>
+				<div class="main-container form-container">
+						<div id='editor_holder-2'></div>
+						<button id='submit-2'>Submit (console.log)</button>
+					</div></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">JavaScript</a></li> -->
 </body>
 </html>

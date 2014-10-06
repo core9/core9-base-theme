@@ -1,4 +1,4 @@
-function init(){
+function init(step){
 
 
 promise.get('wizards/basic/basic.json').then(
@@ -12,7 +12,7 @@ promise.get('wizards/basic/basic.json').then(
 
 					// Initialize the editor
 					var editor = new JSONEditor(document
-							.getElementById('editor_holder-2'), {
+							.getElementById('editor_holder-' + step), {
 						// Enable fetching schemas via ajax
 						ajax : true,
 
@@ -47,7 +47,7 @@ promise.get('wizards/basic/basic.json').then(
 					
 					
 				      // Hook up the submit button to log to the console
-				      document.getElementById('submit-2').addEventListener('click',function(e) {
+				      document.getElementById('submit-' + step).addEventListener('click',function(e) {
 				    	  e.stopPropagation();
 				        // Get the value from the editor
 				        console.log(editor.getValue());
