@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Wizard</title>
+<style type="text/css">
+#content {
+	background-color: #f2f2f2;
+	padding: 20px 10px;
+	overflow: auto;
+}
+
+#tab-container {
+	float: left;
+	margin: 50px 0 0 0;
+	width: 126px;
+}
+
+#tab-container ul {
+	list-style: none;
+	text-align: center;
+}
+
+#tab-container ul li {
+	border-top: 1px solid #666;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	border-left: 8px solid #666;
+	background-color: #ddd;
+	margin: 8px 0;
+}
+
+#tab-container ul li a,#tab-container ul li a:visited {
+	text-decoration: none;
+	color: #666;
+	display: block;
+	padding: 15px 5px;
+}
+
+#tab-container ul li:hover {
+	border-left: 8px solid #333;
+}
+
+#tab-container ul li a:hover {
+	color: #000;
+}
+
+#tab-container ul li.selected {
+	border-right: none;
+	background-color: #fff;
+	border-left: 8px solid #006699;
+}
+
+.main-container {
+	min-height: 400px;
+	margin: 0 0 0 125px;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #888;
+}
+
+.form-container {
+	position: absolute;
+	min-height: 300px;
+	min-width: 400px;
+	background-color: #fff;
+	top: 60px;
+	left: 26px;
+}
+</style>
+<script src="../dist/jsoneditor.js"></script>
+<script src="js/promise.min.js"></script>
+<script src="js/LAB.min.js"></script>
+</head>
+<body>
+	<div id="content">
+		<div id="tab-container">
+			<ul id="tab-ul">
+				<li><a href="#">Step 1</a>
+					<div class="main-container form-container">
+						<div id='editor_holder-1'></div>
+						<button id='submit-1'>Submit (console.log)</button>
+					</div></li>
+				<li><a href="#">Html</a>
+				<div class="main-container form-container">
+						<div id='editor_holder-2'></div>
+						<button id='submit-2'>Submit (console.log)</button>
+					</div></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">JavaScript</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+
+
+	<script>
+		function createWizard(steps) {
+			//console.log(steps);
+			for ( var step in steps) {
+				var script = steps[step].file;
+				$LAB.script(script).wait(function() {
+					init();
+				});
+			}
+		}
+
+		promise.get('wizards/basic/steps.json').then(
+				function(error, text, xhr) {
+					if (error) {
+						alert('Error ' + xhr.status);
+						return;
+					}
+					createWizard(JSON.parse(text))
+				});
+		
+			
+		function showStepForm(e){
+			console.log(e);
+		}
+		
+		function hideAllDivs(){
+			var divs = document.getElementsByClassName('main-container');
+			for(var div in divs){
+				var elem = divs[div];
+				if(elem.tagName == 'DIV'){
+					elem.style.display = "none";
+				}
+			}
+		}
+		
+		
+		document.getElementById('tab-ul').addEventListener("click",function(e) {
+				hideAllDivs();
+				var elem = e.target.parentNode.getElementsByTagName('div')[0];
+				console.log(elem);
+				if(elem !== undefined && elem.tagName == 'DIV'){
+						elem.style.display = "block";
+					
+				}
+		    });
+		
+	</script>
+
+
+
+</body>
+</html>
