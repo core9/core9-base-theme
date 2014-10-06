@@ -7,7 +7,7 @@ promise.get('wizards/basic/basic.json').then(
 						alert('Error ' + xhr.status);
 						return;
 					}
-					
+
 					var starting_value = [ text ];
 
 					// Initialize the editor
@@ -19,7 +19,7 @@ promise.get('wizards/basic/basic.json').then(
 						// The schema for the editor
 						schema : {
 							type : "array",
-							title : "People",
+							title : "People 0",
 							format : "tabs",
 							items : {
 								title : "Person",
@@ -44,15 +44,15 @@ promise.get('wizards/basic/basic.json').then(
 						required_by_default : true
 					});
 
-					
-					
+
+
 				      // Hook up the submit button to log to the console
 				      document.getElementById('submit-' + step).addEventListener('click',function(e) {
 				    	  e.stopPropagation();
 				        // Get the value from the editor
 				        console.log(editor.getValue());
 				      });
-					
+
 				});
 
 }

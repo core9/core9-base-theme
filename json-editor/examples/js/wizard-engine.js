@@ -36,8 +36,8 @@ var Wizard = {
 		Wizard.showChooseDiv();
 
 		//FIXME!!
-		Wizard.setUpChooseOptions(Wizard.json);
-		Wizard.activateChooseButtons(Wizard.json);
+		//Wizard.setUpChooseOptions(Wizard.json);
+		//Wizard.activateChooseButtons(Wizard.json);
 		//
 	},
 

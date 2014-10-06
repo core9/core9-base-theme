@@ -44,15 +44,15 @@ promise.get('wizards/basic/basic.json').then(
 						required_by_default : true
 					});
 
-					
-					
+
+
 				      // Hook up the submit button to log to the console
 				      document.getElementById('submit-' + step).addEventListener('click',function(e) {
 				    	  e.stopPropagation();
 				        // Get the value from the editor
 				        console.log(editor.getValue());
 				      });
-					
+
 				});
 
 }
