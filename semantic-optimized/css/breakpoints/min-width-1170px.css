@@ -12,6 +12,7 @@ main {
 .product-nav {
 	max-width: 26em;
 	display: block;
+	min-height: 31.5em;
 }
 
 .product {

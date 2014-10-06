@@ -31,8 +31,7 @@
 .product-nav {
 	margin-top: 0px;
 	max-width: 100%;
-	_min-height: 31.5em;
-	_display: none;
+	float: left;
 }
 
 .product {
