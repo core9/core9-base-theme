@@ -52,6 +52,17 @@ var Wizard = {
 
 	init : function() {
 
+
+		var datalist = document.getElementById("data-list");
+		var button = document.getElementById("choose-button");
+
+		button.addEventListener("click", function(event) {
+			console.log(datalist.value);
+		}, false);
+
+		return;
+
+
 		promise.get('wizards/basic/steps.json').then(
 				function(error, text, xhr) {
 					if (error) {
