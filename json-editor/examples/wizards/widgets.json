@@ -1,0 +1,5 @@
+{
+  "basic":{
+    "steps":'wizards/basic/steps.json'
+  }
+}

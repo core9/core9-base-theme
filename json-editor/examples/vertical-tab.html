@@ -10,25 +10,20 @@
 </head>
 <body>
 
-
-	<div id="content">
-		<div id="tab-container">
-			<ul id="tab-ul">
-			</ul>
-		</div>
+	<div id="tab-container">
+		<ul id="tab-ul">
+		</ul>
 	</div>
 
+	<script src="js/wizard-engine.js"></script>
 	<script>
-	Wizard.config = {
-			  widgets : {
-				  "basic" : {
-					  "steps" : 'wizards/basic/steps.json'
-				  }
-			  }
-	}
+		var WizardConfig = {
+			widgets : 'wizards/widgets.json'
+		}
+		Wizard.init(WizardConfig);
 	</script>
 
-	<script src="js/wizard-engine.js"></script>
+
 
 </body>
 </html>

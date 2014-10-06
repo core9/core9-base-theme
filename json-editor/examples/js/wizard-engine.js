@@ -74,4 +74,4 @@ var Wizard = {
 
 }
 
-Wizard.init();
+
