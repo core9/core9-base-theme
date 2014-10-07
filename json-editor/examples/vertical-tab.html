@@ -3,155 +3,35 @@
 <head>
 <meta charset="utf-8" />
 <title>Wizard</title>
-<style type="text/css">
-#content {
-	background-color: #f2f2f2;
-	padding: 20px 10px;
-	_overflow: auto;
-}
-
-#tab-container {
-	float: left;
-	margin: 50px 0 0 0;
-	width: 126px;
-}
-
-#tab-container ul {
-	list-style: none;
-	text-align: center;
-}
-
-#tab-container ul li {
-	border-top: 1px solid #666;
-	border-right: 1px solid #666;
-	border-bottom: 1px solid #666;
-	border-left: 8px solid #666;
-	background-color: #ddd;
-	margin: 8px 0;
-}
-
-#tab-container ul li a,#tab-container ul li a:visited {
-	text-decoration: none;
-	color: #666;
-	display: block;
-	padding: 15px 5px;
-}
-
-#tab-container ul li:hover {
-	border-left: 8px solid #333;
-}
-
-#tab-container ul li a:hover {
-	color: #000;
-}
-
-#tab-container ul li.selected {
-	border-right: none;
-	background-color: #fff;
-	border-left: 8px solid #006699;
-}
-
-.main-container {
-	min-height: 400px;
-	margin: 0 0 0 125px;
-	padding: 20px;
-	background-color: #fff;
-	border: 1px solid #888;
-}
-
-.form-container {
-	position: absolute;
-	min-height: 300px;
-	min-width: 400px;
-	background-color: #fff;
-	top: 60px;
-	left: 26px;
-}
-</style>
+<link rel="stylesheet" href="css/wizard-engine.css">
 <script src="../dist/jsoneditor.js"></script>
 <script src="js/promise.min.js"></script>
 <script src="js/LAB.min.js"></script>
 </head>
 <body>
-	<div id="content">
-		<div id="tab-container">
-			<ul id="tab-ul">
-			</ul>
-		</div>
+
+	<div id="tab-container">
+		<ul id="tab-ul">
+         <li><a href="#">Choose</a>
+        <div id="choose-div" class="main-container form-container">
+          <input type="text" id="data-list" list="widgets">
+          <datalist id="widgets">
+          </datalist>
+          <button id="choose-button">select</button>
+          <button onclick="location.reload();">reset</button>
+        </div></li>
+		</ul>
 	</div>
 
-
-
-
+	<script src="js/wizard-engine.js"></script>
 	<script>
-		function getStep(step, label) {
-			var li = document.createElement("li");
-			var a = document.createElement("a");
-			a.setAttribute("href", "#");
-			a.appendChild(document.createTextNode(label));
-			li.appendChild(a);
-			var div = document.createElement("div");
-			div.setAttribute("class", "main-container form-container");
-			var innerDiv = document.createElement("div");
-			innerDiv.setAttribute("id", "editor_holder-" + step);
-			div.appendChild(innerDiv);
-			var button = document.createElement("button");
-			button.setAttribute("id", "submit-" + step);
-			button.appendChild(document.createTextNode("Submit"));
-			div.appendChild(button);
-			li.appendChild(div);
-			return li;
+		var WizardConfig = {
+			widgets : 'wizards/widgets.json'
 		}
-
-		function getScript(script, step) {
-			$LAB.script(script).wait(function() {
-				init(step);
-			});
-		}
-
-		function createWizard(steps) {
-			var ul = document.getElementById('tab-ul');
-			for ( var step in steps) {
-				var script = steps[step].file;
-				ul.appendChild(getStep(step, steps[step].label));
-				getScript(script, step);
-			}
-		}
-
-		promise.get('wizards/basic/steps.json').then(
-				function(error, text, xhr) {
-					if (error) {
-						alert('Error ' + xhr.status);
-						return;
-					}
-					createWizard(JSON.parse(text))
-				});
-
-		function hideAllDivs() {
-			var divs = document.getElementsByClassName('main-container');
-			for ( var div in divs) {
-				var elem = divs[div];
-				if (elem.tagName == 'DIV') {
-					elem.style.display = "none";
-				}
-			}
-		}
-
-		document.getElementById('tab-ul')
-				.addEventListener(
-						"click",
-						function(e) {
-							if (e.target.tagName != 'A') {
-								return;
-							}
-							hideAllDivs();
-							var elem = e.target.parentNode
-									.getElementsByTagName('div')[0];
-							if (elem !== undefined && elem.tagName == 'DIV') {
-								elem.style.display = "block";
-							}
-						});
+		Wizard.init(WizardConfig);
 	</script>
+
+
 
 </body>
 </html>
