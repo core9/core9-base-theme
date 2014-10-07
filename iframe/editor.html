@@ -9,11 +9,14 @@
 <link rel="stylesheet" type="text/css" href="css/editor.css"
 	media="screen" />
 <script type="text/javascript" src="js/jquery.js"></script>
-<link rel="stylesheet" type="text/css" href="css/jquery.steps.css"
-	media="screen" />
-<script type="text/javascript" src="js/jquery.steps.min.js"></script>
-<script type="text/javascript" src="js/promise.min.js"></script>
 <script type="text/javascript" src="js/doT.min.js"></script>
+
+
+<link rel="stylesheet" href="css/wizard-engine.css">
+<script src="js/jsoneditor.min.js"></script>
+<script src="js/promise.min.js"></script>
+<script src="js/LAB.min.js"></script>
+
 <script>
 	function t(s, d) {
 		for ( var p in d)
@@ -55,6 +58,30 @@
 
 
 	<div id="modal"></div>
+	<div id="wizard-wrapper">
+	<button class="add-block" style="float:right;">close</button>
+		<div id="tab-container">
+		<ul id="tab-ul">
+         <li><a href="#">Choose</a>
+        <div id="choose-div" class="main-container form-container">
+          <input type="text" id="data-list" list="widgets">
+          <datalist id="widgets">
+          </datalist>
+          <button id="choose-button">select</button>
+          <button onclick="location.reload();">reset</button>
+        </div></li>
+		</ul>
+	</div>
+
+	<script src="js/wizard-engine.js"></script>
+	<script>
+		var WizardConfig = {
+			widgets : 'wizards/widgets.json'
+		}
+		Wizard.init(WizardConfig);
+	</script>
+	
+	</div>
 	<div style="margin: 20px; text-align: right;">
 
 		<iframe id="iframe" src="front-page.html" width="100%" scrolling="no"
