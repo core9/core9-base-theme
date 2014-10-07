@@ -19,10 +19,10 @@ class BlockTest extends PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-    	$file = "C:\wamp\www\core9-base-theme\src\iframe\frontpage.html";
+    	$file = "C:\\wamp\\www\\core9-base-theme\\src\\iframe\\frontpage.html";
     	$classname = "block";
 
-        $this->object = new Block($fil, $classname);
+        $this->object = new Block($file, $classname);
     }
 
     /**
@@ -39,10 +39,7 @@ class BlockTest extends PHPUnit_Framework_TestCase
      */
     public function testGetList()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->assertTrue(true);
     }
 
     /**
