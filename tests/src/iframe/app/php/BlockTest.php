@@ -1,6 +1,6 @@
 <?php
 
-require_once 'C:\wamp\www\core9-base-theme\src\iframe\app\php\Block.php';
+include 'C:\wamp\www\core9-base-theme\src\iframe\app\classes\Block.php';
 
 /**
  * Test class for Block.
@@ -19,7 +19,10 @@ class BlockTest extends PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->object = new Block;
+    	$file = "C:\wamp\www\core9-base-theme\src\iframe\frontpage.html";
+    	$classname = "block";
+
+        $this->object = new Block($fil, $classname);
     }
 
     /**
@@ -78,4 +81,3 @@ class BlockTest extends PHPUnit_Framework_TestCase
         );
     }
 }
-?>

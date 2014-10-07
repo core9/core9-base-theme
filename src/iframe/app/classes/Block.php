@@ -4,7 +4,10 @@ class Block {
 	function __construct($filename, $classname) {
 		$dom = new domDocument ();
 		$dom->preserveWhiteSpace = true;
+		libxml_use_internal_errors(true);
 		$dom->loadHTML ( file_get_contents ( $filename ) );
+		libxml_use_internal_errors(false);
+		var_dump($dom);
 		$finder = new DomXPath ( $dom );
 		$nodes = $finder->query ( "//*[contains(@class, '$classname')]" );
 		$this->blockList = $this->getBlockList ( $nodes->item ( 0 )->parentNode );
