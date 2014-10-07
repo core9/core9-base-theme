@@ -25,10 +25,10 @@ promise.get('wizards/basic/basic.json').then(
 								title : "Person",
 								headerTemplate : "{{i}} - {{self.name}}",
 								oneOf : [ {
-									$ref : "wizards/basic/basic_person.json",
+									$ref : "http://localhost/core9-base-theme/src/iframe/wizards/basic/basic_person.json",
 									title : "Basic Person"
 								}, {
-									$ref : "wizards/basic/person.json",
+									$ref : "http://localhost/core9-base-theme/src/iframe/wizards/basic/person.json",
 									title : "Complex Person"
 								} ]
 							}
