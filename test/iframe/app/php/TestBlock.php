@@ -1,6 +1,5 @@
 <?php
 
-
 class TestBlock extends \PHPUnit_Framework_TestCase
 {
     /**
@@ -9,6 +8,7 @@ class TestBlock extends \PHPUnit_Framework_TestCase
     public function testMethod($data)
     {
         $this->assertTrue($data);
+        echo dirname(__FILE__);
     }
 
     public function provider()
