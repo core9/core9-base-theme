@@ -111,8 +111,10 @@
 			messageCallback : function(messageData) { // Callback fn when message is received
 				console.log(messageData);
 				//alert(messageData.message);
-				if (messageData.message == 'edit-block') {
-					window.location = "#state=edit";
+				//'edit-block::selected='
+				var data = JSON.parse(messageData.message);
+				if (data.action == 'edit-block') {
+					window.location = "#state=edit-block-" + data.block;
 					$('#wizard-wrapper').toggle();
 					$('#modal').toggle();
 				}

@@ -49,7 +49,7 @@ Core9.menu = {
 			console.log('sending edit message');
 			console.log('selected block : ' + Core9.menu.selectedBlock);
 			console.log(event);
-			if ('parentIFrame' in window) window.parentIFrame.sendMessage('edit-block');return false;
+			if ('parentIFrame' in window) window.parentIFrame.sendMessage('{"action": "edit-block","block": ' + Core9.menu.selectedBlock + '}');return false;
 		},
 
 		listener :	function (event) {
