@@ -137,6 +137,12 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 
+			/*
+			* if submit refresh iframe behind the scene
+			* document.getElementById('iframe').contentWindow.location.reload();
+			*/
+
+
 			if (typeof String.prototype.startsWith != 'function') {
 				  // see below for better implementation!
 				  String.prototype.startsWith = function (str){
