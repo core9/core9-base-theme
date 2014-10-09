@@ -137,7 +137,15 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 
-			if(location.hash == "#state=edit"){
+			if (typeof String.prototype.startsWith != 'function') {
+				  // see below for better implementation!
+				  String.prototype.startsWith = function (str){
+				    return this.indexOf(str) == 0;
+				  };
+				}
+
+
+			if(location.hash.startsWith("#state=edit-block-")){
 		        $('#wizard-wrapper').toggle();
 		        $('#modal').toggle();
 			}
