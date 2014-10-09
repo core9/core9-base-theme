@@ -80,7 +80,7 @@
 		}
 		Wizard.init(WizardConfig);
 	</script>
-	
+
 	</div>
 	<div style="margin: 20px; text-align: right;">
 
@@ -112,6 +112,7 @@
 				console.log(messageData);
 				//alert(messageData.message);
 				if (messageData.message == 'edit-block') {
+					window.location = "#state=edit";
 					$('#wizard-wrapper').toggle();
 					$('#modal').toggle();
 				}
@@ -133,6 +134,13 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
+
+			if(location.hash == "#state=edit"){
+		        $('#wizard-wrapper').toggle();
+		        $('#modal').toggle();
+			}
+
+
 			$('.add-block, .mega-hoverlink').click(function() {
 
 				$('#wizard-wrapper').toggle();
@@ -143,6 +151,9 @@
 			$('#variants').click(function() {
 				$('#page-selector').toggle();
 			});
+
+
+
 
 		});
 	</script>

@@ -21,11 +21,11 @@ Core9.menu = {
 		},
 
 		listener :	function (event) {
-			
+
 			if(Core9.menu.endsWith(event.data, "null:offset:null:null:0")){
 				return;
 			}
-			
+
 			//if ( event.origin !== location.origin )
 			//	return
 			document.getElementById("test").innerHTML = "received: " + event.data + "<script>var url = " + event.data + "</script>";
