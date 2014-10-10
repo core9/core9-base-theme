@@ -3,7 +3,7 @@
     "steps":"wizards/basic/steps.json"
   },
     "video":{
-    "steps":"wizards/video/data/steps.json"
+    "steps":"../clients/easydrain/wizards/video/steps/steps.json"
   },
     "slider":{
     "steps":"wizards/basic/steps.json"

@@ -1,5 +1,5 @@
 {
-  "$ref": "http://localhost/core9-base-theme/src/iframe/wizards/video/schema/basic_person.json",
+  "$ref": "http://localhost/core9-base-theme/src/editor/clients/easydrain/wizards/video/schema/basic_person.json",
   "properties": {
     "location": {
       "type": "object",
