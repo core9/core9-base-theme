@@ -1,7 +1,7 @@
 function init(step){
 
 
-promise.get('wizards/basic/basic.json').then(
+promise.get('wizards/video/basic.json').then(
 				function(error, text, xhr) {
 					if (error) {
 						alert('Error ' + xhr.status);
@@ -25,10 +25,10 @@ promise.get('wizards/basic/basic.json').then(
 								title : "Person",
 								headerTemplate : "{{i}} - {{self.name}}",
 								oneOf : [ {
-									$ref : "http://localhost/core9-base-theme/src/iframe/wizards/basic/basic_person.json",
+									$ref : "http://localhost/core9-base-theme/src/iframe/wizards/video/basic_person.json",
 									title : "Basic Person"
 								}, {
-									$ref : "http://localhost/core9-base-theme/src/iframe/wizards/basic/person.json",
+									$ref : "http://localhost/core9-base-theme/src/iframe/wizards/video/person.json",
 									title : "Complex Person"
 								} ]
 							}
