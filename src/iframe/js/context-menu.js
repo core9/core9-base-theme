@@ -51,8 +51,16 @@ Core9.menu = {
 			console.log('selected block position : ' + Core9.menu.selectedBlockPosition);
 			console.log('selected block : ');
 			console.log(Core9.menu.selectedBlock);
+			console.log('data attribute type :  ' + Core9.menu.selectedBlock.dataset.type);
+
+			var jsonData = {
+					"action": "edit-block",
+					"block": Core9.menu.selectedBlockPosition,
+					"type" : Core9.menu.selectedBlock.dataset.type
+			}
+
 			console.log(event);
-			if ('parentIFrame' in window) window.parentIFrame.sendMessage('{"action": "edit-block","block": ' + Core9.menu.selectedBlockPosition + '}');return false;
+			if ('parentIFrame' in window) window.parentIFrame.sendMessage(JSON.stringify(jsonData));return false;
 		},
 
 		listener :	function (event) {

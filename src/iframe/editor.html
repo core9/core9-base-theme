@@ -113,8 +113,9 @@
 				//alert(messageData.message);
 				//'edit-block::selected='
 				var data = JSON.parse(messageData.message);
+				console.log(data);
 				if (data.action == 'edit-block') {
-					window.location = "#state=edit-block-" + data.block;
+					window.location = "#state=edit-block-" + data.block + "-type-" + data.type;
 					$('#wizard-wrapper').toggle();
 					$('#modal').toggle();
 				}
