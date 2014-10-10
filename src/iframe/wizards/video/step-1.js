@@ -18,20 +18,24 @@ promise.get('wizards/video/basic.json').then(
 
 						// The schema for the editor
 						schema : {
-							type : "array",
-							title : "People 0",
-							format : "tabs",
-							items : {
-								title : "Person",
-								headerTemplate : "{{i}} - {{self.name}}",
-								oneOf : [ {
-									$ref : "http://localhost/core9-base-theme/src/iframe/wizards/video/basic_person.json",
-									title : "Basic Person"
-								}, {
-									$ref : "http://localhost/core9-base-theme/src/iframe/wizards/video/person.json",
-									title : "Complex Person"
-								} ]
-							}
+							type : "object",
+							title : "Video",
+							  "properties": {
+							    "first_name": {
+							      "type": "string"
+							    },
+							    "last_name": {
+							      "type": "string"
+							    },
+							    "full_name": {
+							      "type": "string",
+							      "template": "{{fname}} {{lname}}",
+							      "watch": {
+							        "fname": "first_name",
+							        "lname": "last_name"
+							      }
+							    }
+							  }
 						},
 
 						// Seed the form with a starting value
@@ -39,6 +43,12 @@ promise.get('wizards/video/basic.json').then(
 
 						// Disable additional properties
 						no_additional_properties : true,
+
+						disable_edit_json : true,
+
+						disable_properties : true,
+
+						disable_collapse : true,
 
 						// Require all properties by default
 						required_by_default : true
@@ -49,7 +59,9 @@ promise.get('wizards/video/basic.json').then(
 				      // Hook up the submit button to log to the console
 				      document.getElementById('submit-' + step).addEventListener('click',function(e) {
 				    	  e.stopPropagation();
+				    	  console.log(editor.validate());
 				        // Get the value from the editor
+				    	  console.log('sending to swagger api');
 				        console.log(editor.getValue());
 				      });
 
