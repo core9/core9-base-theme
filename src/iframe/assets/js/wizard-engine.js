@@ -26,6 +26,12 @@ var Wizard = {
 		});
 	},
 
+	goToNextStep : function(event){
+  	  var selectedLi = Wizard.getParentElementWithClass(event.target, 'step');
+	  Wizard.hideAllDivs();
+	  selectedLi.nextSibling.querySelector('.main-container').style.display = "block";
+	},
+
 	createWizard : function(steps) {
 		var ul = document.getElementById('tab-ul');
 		for ( var step in steps) {

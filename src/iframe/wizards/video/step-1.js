@@ -42,14 +42,12 @@ promise.get('wizards/video/video.json').then(
 						required_by_default : true
 					});
 				      // Hook up the submit button to log to the console
-				      document.getElementById('submit-' + step).addEventListener('click',function(e) {
-				    	  e.stopPropagation();
+				      document.getElementById('submit-' + step).addEventListener('click',function(event) {
+				    	  event.stopPropagation();
 				    	  console.log(editor.validate());
-				    	  var selectedLi = Wizard.getParentElementWithClass(e.target, 'step');
-				    	  Wizard.hideAllDivs();
-				    	  selectedLi.nextSibling.querySelector('.main-container').style.display = "block";
+				    	  Wizard.goToNextStep(event);
 				    	  console.log('sending to swagger api');
-				        console.log(editor.getValue());
+				    	  console.log(editor.getValue());
 				      });
 
 				});
