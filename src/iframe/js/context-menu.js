@@ -7,7 +7,8 @@ var Core9 = {}
 Core9.menu = {
 
 		blockClassName : function(){return "block";},
-		selectedBlock : "",
+		selectedBlockPosition : "",
+		selectedBlock : {},
 
 		endsWith : function endsWith(str, suffix) {
 		    return str.indexOf(suffix, str.length - suffix.length) !== -1;
@@ -47,9 +48,11 @@ Core9.menu = {
 
 		editBlock : function(event){
 			console.log('sending edit message');
-			console.log('selected block : ' + Core9.menu.selectedBlock);
+			console.log('selected block position : ' + Core9.menu.selectedBlockPosition);
+			console.log('selected block : ');
+			console.log(Core9.menu.selectedBlock);
 			console.log(event);
-			if ('parentIFrame' in window) window.parentIFrame.sendMessage('{"action": "edit-block","block": ' + Core9.menu.selectedBlock + '}');return false;
+			if ('parentIFrame' in window) window.parentIFrame.sendMessage('{"action": "edit-block","block": ' + Core9.menu.selectedBlockPosition + '}');return false;
 		},
 
 		listener :	function (event) {
@@ -140,16 +143,16 @@ Core9.menu = {
 
 			console.log(event);
 
-			var selectedBlock = Core9.menu.getParentElementWithClass(event.target,Core9.menu.blockClassName());
+			Core9.menu.selectedBlock = Core9.menu.getParentElementWithClass(event.target,Core9.menu.blockClassName());
 
-			console.log(selectedBlock);
+			console.log(Core9.menu.selectedBlock);
 			var current;
 			for(var i = 0; i < blocks.length;i++)
 			{
-			   if(blocks[i] == selectedBlock)
+			   if(blocks[i] == Core9.menu.selectedBlock)
 			   {
 				   current = i;
-				   Core9.menu.selectedBlock = i;
+				   Core9.menu.selectedBlockPosition = i;
 			   }
 			}
 
