@@ -25,10 +25,10 @@ promise.get('wizards/video/data/basic.json').then(
 								title : "Person",
 								headerTemplate : "{{i}} - {{self.name}}",
 								oneOf : [ {
-									$ref : "http://localhost/core9-base-theme/src/iframe/wizards/video/data/basic_person.json",
+									$ref : "http://localhost/core9-base-theme/src/iframe/wizards/video/schema/basic_person.json",
 									title : "Basic Person"
 								}, {
-									$ref : "http://localhost/core9-base-theme/src/iframe/wizards/video/data/person.json",
+									$ref : "http://localhost/core9-base-theme/src/iframe/wizards/video/schema/person.json",
 									title : "Complex Person"
 								} ]
 							}
