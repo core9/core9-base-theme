@@ -1,6 +1,6 @@
 function init(step){
 
-promise.get('wizards/video/video.json').then(
+promise.get('wizards/video/data/video.json').then(
 				function(error, text, xhr) {
 					if (error) {
 						alert('Error ' + xhr.status);
