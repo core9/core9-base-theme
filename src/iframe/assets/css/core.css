@@ -11,7 +11,7 @@ header {
   _background-color: #ccc;
   height: 140px;
   text-align: center;
-  background-image: url('../placeholders/menu_background_(14x125).jpg');
+  background-image: url('../../placeholders/menu_background_(14x125).jpg');
   background-repeat: repeat-x;
 }
 
@@ -42,7 +42,7 @@ figure {
   margin-top: 15px;
   margin-left: 10px;
   margin-right: 10px;
-  
+
   _background-color: #ccc;
 }
 
@@ -53,6 +53,6 @@ figcaption {
 
 footer {
     height: 386px;
-    background-image: url('../placeholders/footer_texture_(18x380).jpg');
+    background-image: url('../../placeholders/footer_texture_(18x380).jpg');
    background-repeat: repeat-x;
 }
